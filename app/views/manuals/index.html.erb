@@ -10,7 +10,7 @@
   <%= render "devise/shared/header" %>
 
     <div class="main">
-    <%# <% if user_signed_in? %>
+    <% if user_signed_in? %>
 
     <div class="manual-body">
       <div class="manual-side">
@@ -28,25 +28,24 @@
           一覧
         </span>
 
-          <%# <% @manuals.each do |manual|
+          <% @manuals.each do |manual| %>%
 
             <div class="question-top">
               質問
             </div>
         <div class="comments">
           <%= manual.question %><br>
-        <%# </div>
+        </div>
         <div class="answer-top">
           回答
         </div>
           <div class="comments">
           <%= manual.answer %><br><br>
-     <%# </div><br>
+     </div><br>
         <% end %>
-      <%# </div>
+      </div>
     </div>
- %>
-<%# 
+  
     <% else %> 
       <div class="main-menu">
         <div class="haiti">
@@ -58,7 +57,7 @@
             </div>
         </div>
       </div>
-    <%# end %>
+    <% end %>
 
     </div>
 
