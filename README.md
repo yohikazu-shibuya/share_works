@@ -1,24 +1,52 @@
-# README
+# アプリケーション名
+  'share_works'
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+- 社内向け情報共有システム。コールセンター・全国展開している小売りなど向け。
 
-Things you may want to cover:
+# URL
+- 予定
 
-* Ruby version
+# テスト用アカウント
+- メールアドレス：abc@abc.com
+- パスワード123abc
 
-* System dependencies
+# 利用方法
+- 各マニュアルを追加、またマニュアル以外のQAを追加できる
 
-* Configuration
+# 目指した課題解決
+- マニュアルはきちんと用意はされているが、マニュアルに記載がないことで、
+  各担当部署へ質問した結果解決できた内容が、各店舗または社内での共有ができないことを、
+  解決する。
 
-* Database creation
+# 要件定義
+- DB設計
+- ユーザー管理機能
+- メニュー画面
+- マニュアル・QA一覧画面
+- マニュアル追加機能
+- QA追記機能
+- マニュアル編集機能
+- QA編集機能
 
-* Database initialization
+# 実装した機能についての説明
+ - ユーザーの新規登録・ログイン機能
+ - マニュアルの追記機能
 
-* How to run the test suite
+# 実装予定の機能
+ - 思案中
 
-* Services (job queues, cache servers, search engines, etc.)
+# データベース設計
+ - ER図
+[![Image from Gyazo](https://i.gyazo.com/2fb92fda3139f7d4b5d43ee263e21537.png)](https://gyazo.com/2fb92fda3139f7d4b5d43ee263e21537)
+# テーブル設計
 
-* Deployment instructions
+# usersテーブル
+@@ -79,5 +38,5 @@
+- belongs_to :user
+- has_one :manual
 
-* ...
+ # ローカルでの動作方法
+ - 作成予定
+# ローカルでの動作方法
+- 作成予定
