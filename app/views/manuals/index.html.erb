@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>
+    <link rel="stylesheet" href="style.css">
+    </title>
+  </head>
+  <body>
+  <%= render "devise/shared/header" %>
+
+    <div class="main">
+    <%# <% if user_signed_in? %>
+
+    <div class="manual-body">
+      <div class="manual-side">
+        <div class="manual-side-menu">
+          メニュー
+        </div>
+        <p>マニュアル一覧</p>
+        <div class="manual-a">
+        <%= link_to "マニュアル追加", new_manual_path, class: "post" %><br>
+        </div>
+        <p>QA追加</p>
+      </div>
+      <div class="manual-list">
+        <span class="manual-list-menu">
+          一覧
+        </span>
+
+          <%# <% @manuals.each do |manual|
+
+            <div class="question-top">
+              質問
+            </div>
+        <div class="comments">
+          <%= manual.question %><br>
+        <%# </div>
+        <div class="answer-top">
+          回答
+        </div>
+          <div class="comments">
+          <%= manual.answer %><br><br>
+     <%# </div><br>
+        <% end %>
+      <%# </div>
+    </div>
+ %>
+<%# 
+    <% else %> 
+      <div class="main-menu">
+        <div class="haiti">
+            <div class="login-in">
+              <%= link_to "ログイン", user_session_path, class: "post" %><br>
+            </div>
+            <div class="login-new">
+              <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+            </div>
+        </div>
+      </div>
+    <%# end %>
+
+    </div>
+
+  </body>
+</html>
