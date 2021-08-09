@@ -19,7 +19,7 @@ class ManualsController < ApplicationController
 
   private
   def manual_params
-    params.require(:manual).permit(:question, :answer)
+    params.require(:manual).permit(:notice)
 
   end
 end
