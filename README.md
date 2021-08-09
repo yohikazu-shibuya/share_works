@@ -42,65 +42,57 @@
 # テーブル設計
 
 # usersテーブル
-# usersテーブル
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
-| nickname           | string | null: false |
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false |
 | last_name          | string | null: false |
 | first_name         | string | null: false |
 | last_name_kana     | string | null: false |
 | first_name_kana    | string | null: false |
-| birthday           | date   | null: false |
+| affiliation        | string | null: false |
 
 ### Association
-- has_many :items
-- has_many :orders
+- has_many :
+- has_many :
 
-# itemsテーブル
+# noticesテーブル
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
-| product                | string     | null: false                    |
-| product_description    | text       | null: false                    |
-| category_id            | integer    | null: false                    |
-| product_detail_id      | integer    | null: false                    |
-| ship_base_id           | integer    | null: false                    |
-| prefecture_id          | integer    | null: false                    |
-| ship_date_id           | integer    | null: false                    |
-| price                  | integer    | null: false                    |
+| type                   | integer    | null: false                    |
+| subject                | string     | null: false                    |
+| notice                 | string     | null: false                    |
 | user                   | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :user
-- has_one :order
+- belongs_to :
+- has_one :
 
-# ordersテーブル
-| Column     | Type       | Options                        |
-| ---------- | ---------- | ------------------------------ |
-| user       | references | null: false, foreign_key: true |
-| item       | references | null: false, foreign_key: true |
-
-### Association
-- belongs_to :item
-- belongs_to :user
-- has_one :address
-
-# addressesテーブル
-| Column         | Type       | Options                        |
-| ---------------| ---------- | ------------------------------ |
-| post_code      | string     | null: false                    |
-| prefecture_id  | integer    | null: false                    |
-| city           | string     | null: false                    |
-| block          | string     | null: false                    |
-| building       | string     |                                |
-| phone_number   | string     | null: false                    |
-| order          | references | null: false, foreign_key: true |
+# manualsテーブル
+| Column     | Type       | Options                                     |
+| ---------- | ---------- | ------------------------------------------- |
+| type                    | integer    | null: false                    |
+| subject                 | string     | null: false                    |
+| question                | text       | null: false                    |
+| answer                  | text       | null: false                    |
+| user                    | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :order
+- belongs_to :
+- belongs_to :
+- has_one :
+
+# qasテーブル
+| Column     | Type       | Options                                     |
+| ---------- | ---------- | ------------------------------------------- |
+| type                    | integer    | null: false                    |
+| subject                 | string     | null: false                    |
+| question                | text       | null: false                    |
+| answer                  | text       | null: false                    |
+| user                    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :
 
  # ローカルでの動作方法
  - 作成予定
-# ローカルでの動作方法
-- 作成予定
