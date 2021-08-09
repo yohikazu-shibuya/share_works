@@ -59,7 +59,7 @@
 # noticesテーブル
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
-| type                   | integer    | null: false                    |
+| type_qa                | integer    | null: false                    |
 | subject                | string     | null: false                    |
 | notice                 | string     | null: false                    |
 | user                   | references | null: false, foreign_key: true |
@@ -71,7 +71,7 @@
 # manualsテーブル
 | Column     | Type       | Options                                     |
 | ---------- | ---------- | ------------------------------------------- |
-| type                    | integer    | null: false                    |
+| type_qa                 | integer    | null: false                    |
 | subject                 | string     | null: false                    |
 | question                | text       | null: false                    |
 | answer                  | text       | null: false                    |
@@ -85,7 +85,7 @@
 # qasテーブル
 | Column     | Type       | Options                                     |
 | ---------- | ---------- | ------------------------------------------- |
-| type                    | integer    | null: false                    |
+| type_qa                 | integer    | null: false                    |
 | subject                 | string     | null: false                    |
 | question                | text       | null: false                    |
 | answer                  | text       | null: false                    |
