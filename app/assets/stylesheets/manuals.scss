@@ -1,3 +1,149 @@
-// Place all the styles related to the manuals controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.one_share {
+  border-bottom:solid;
+  border-color: rgb(142, 199, 246);
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+//ログイン画面
+.login-menu {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  height: 100vh;
+  background-color: #def7ff;
+  
+}
+.login-center{
+padding-top: 60px;
+margin: auto;
+border:solid;
+border-color: rgb(142, 199, 246);
+height: 190px;
+width: 170px;
+background-color: #def7ff;
+text-align: center;
+}
+
+//新規登録画面
+.new-sessions-menu-name {
+  font-size: 30px;
+  text-align: center;
+}
+.login-menu-name {
+  font-size: 30px;
+  text-align: center;
+}
+.new-sessions-menu {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  height: 100vh;
+  background-color: #def7ff; 
+}
+.new-sessions-center{
+padding-top: 30px;
+margin: auto;
+border:solid;
+border-color: rgb(142, 199, 246);
+height: 450px;
+width: 400px;
+background-color: #def7ff;
+text-align: center;
+}
+
+//メイン画面
+  .main-menu {
+    padding-top: 130px;
+    padding-bottom: 30px;
+    height: 100vh;
+    background-color: #def7ff;
+    
+}
+.main-center{
+  padding-top: 60px;
+  padding-bottom: 10px;
+  margin: auto;
+  border:solid;
+  border-color: rgb(142, 199, 246);
+  height: 170px;
+  width: 170px;
+  background-color: #def7ff;
+  text-align: center;
+}
+
+.light-header{
+  padding-right: 10px;
+}
+.site-header {
+  height: 50px;
+  background-color: #def7ff;
+  font-size: 20px;
+}
+
+.login-in{
+  font-size: 20px;
+}
+.login-new{
+  font-size: 20px;
+}
+
+.manual-body{
+display: flex;
+height: 100vh;
+}
+
+.manual-side{
+  height: 100vh;
+  width: 200px;
+  background-color: #def7ff;
+  border-right:solid;
+  border-color: rgb(142, 199, 246);
+}
+
+.manual-side-menu{
+  font-size: 20px;
+}
+
+.manual-list{
+  font-size: 20px;
+  height: 100vh;
+  width: 100%;
+  background-color: #def7ff;
+}
+
+.container {
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  box-sizing: border-box;
+}
+
+
+// .notice-top{
+//   border:solid;
+//   border-color: white;
+// }
+
+.notice-side-one{
+  display: flex;
+}
+
+.notice-main-one{
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.notice-main-two{
+  padding-right: 15px;
+}
+
+.footer {
+  border-top:solid;
+  border-color: rgb(142, 199, 246);
+  height: 50px;
+  background-color: #def7ff;
+  font-size: 20px;
+}
