@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_09_083854) do
+ActiveRecord::Schema.define(version: 2021_08_10_134025) do
 
   create_table "manuals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "type_qa", null: false
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 2021_08_09_083854) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_manuals_on_user_id"
+  end
+
+  create_table "notices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "type_qa", null: false
+    t.string "subject", null: false
+    t.text "notice", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_notices_on_user_id"
   end
 
   create_table "qas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,5 +62,6 @@ ActiveRecord::Schema.define(version: 2021_08_09_083854) do
   end
 
   add_foreign_key "manuals", "users"
+  add_foreign_key "notices", "users"
   add_foreign_key "qas", "users"
 end
