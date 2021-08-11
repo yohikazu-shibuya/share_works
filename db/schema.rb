@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_08_10_134025) do
 
   create_table "manuals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "type_qa", null: false
+    t.integer "type_qa_id", null: false
     t.string "subject", null: false
     t.text "question", null: false
     t.text "answer", null: false
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_08_10_134025) do
   end
 
   create_table "notices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "type_qa", null: false
+    t.integer "type_qa_id", null: false
     t.string "subject", null: false
     t.text "notice", null: false
     t.bigint "user_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_08_10_134025) do
   end
 
   create_table "qas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "type_qa", null: false
+    t.integer "type_qa_id", null: false
     t.string "subject", null: false
     t.text "question", null: false
     t.text "answer", null: false

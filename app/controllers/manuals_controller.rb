@@ -18,6 +18,6 @@ class ManualsController < ApplicationController
 
   private
   def manual_params
-    params.require(:type_qa, :manual, :subject, :question, :answer)
+    params.require(:type_qa_id, :manual, :subject, :question, :answer)
   end
 end

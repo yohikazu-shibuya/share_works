@@ -18,7 +18,7 @@ class QasController < ApplicationController
 
   private
   def qa_params
-    params.require(:qa).permit(:type_qa, :question, :answer)
+    params.require(:qa).permit(type_qa_id, :question, :answer)
 
   end
 end

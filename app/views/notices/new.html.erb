@@ -1,8 +1,10 @@
 <%= render "devise/shared/header" %>
 
-<%= form_with model: @notice, local: true do |f|%>
+<%= form_with(model: @notice, local: true) do |f|%>
 
-<%= f.text_area :type_qa, placeholder:"例) カテゴリ" %><br>
+<%# <%= f.text_area :type_qa, placeholder:"例) カテゴリ" %>
+
+<%= f.collection_select(:type_qa_id, Genre.all, :id, :name, {}) %><br><br>
 
 <%= f.text_area :subject, placeholder:"例) 件名" %><br>
 
