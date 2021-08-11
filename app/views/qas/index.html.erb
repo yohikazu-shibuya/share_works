@@ -1,63 +1,66 @@
-  <%= render "devise/shared/header" %>
+<%= render "devise/shared/header" %>
 
     <div class="main">
-    <% if user_signed_in? %>
-    <div class="manual-body">
-      
-           <div class="manual-side">
-        <div class="manual-side-menu">
-          メニュー
-        </div>
-        <div class="manual-a">
-          QA一覧
-        </div><br>
-          
-        <div class="manual-a">
-        <%= link_to "お知らせ追加", new_manual_path, class: "post" %>
-        </div>
-        <%= link_to "QA追加", new_qa_path, class: "post" %>
-      </div>
+      <% if user_signed_in? %>
+        <div class="manual-body">
+            
+          <div class="manual-side">
+            <div class="manual-side-menu">
+              メニュー
+            </div>
+            <div class="manual-a">
+              QA一覧
+            </div><br>
+                      
+              <div class="manual-a">
+                <%= link_to "お知らせ追加", new_manual_path, class: "post" %>
+              </div>
+              <div class="manual-a">
+                <%= link_to "QA追加", new_qa_path, class: "post" %>
+              </div>
+          </div>
 
-      <div class="manual-list">
-        <span class="manual-list-menu">
-          ポイントカードについてのQA<br>
-          ※にここにはプルダウンで、各項目を選択できるようにする。
-          
-        </span><br><br>
-          <div class="notice-top">
-            <% @qas.each do |qa| %>
-                  <div class="notice-side-one">
-                    日時
-                      <div class="notice-main-one">
-                        <%= qa.created_at.strftime('%Y/%m/%d %H:%M') %><br>
+                <div class="manual-list">
+                  <span class="manual-list-menu">
+                    ポイントカードについてのQA<br>
+                    ※にここにはプルダウンで、各項目を選択できるようにする。
+                  </span><br><br>
+                  <div class="notice-top">
+                    <% @qas.each do |qa| %>
+                      <div class="notice-side-one">
+                        日時
+                        <div class="notice-main-one">
+                          <%= qa.created_at.strftime('%Y/%m/%d %H:%M') %><br>
+                        </div>
+                        <div class="notice-main-two">
+                          <div class="notice-side-one">
+                          <%= link_to "QA追加", qa_path(:id), class: "get" %>
+                              <div class="notice-main-two">
+                                <%= qa.genre.name %>
+                              </div>
+                              <div class="notice-main-two">
+                                <%= qa.subject %>
+                              </div>
+                              </div>
+                              </div>
+                            </div>
+                      <% end %>
                       </div>
-                    <div class="notice-main-two">
-                        <%= qa.type_qa %><br>
-                        質問
-                        <%= qa.question %><br>
-                        回答
-                        <%= qa.answer %>
-                    </div>
                   </div>
                 </div>
-            <% end %>
+              
+              <% else %> 
+              <div class="main-menu">
+                <div class="main-center">
+                    <div class="login-in">
+                      <%= link_to "ログイン", user_session_path, class: "post" %><br>
+                    </div>
+                    <div class="login-new">
+                      <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+                    </div>
+            </div>
           </div>
-      </div>
-    </div>
-  
-    <% else %> 
-      <div class="main-menu">
-        <div class="main-center">
-            <div class="login-in">
-              <%= link_to "ログイン", user_session_path, class: "post" %><br>
-            </div>
-            <div class="login-new">
-              <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-            </div>
-        </div>
-      </div>
-    <% end %>
-
+        <% end %>
     </div>
 
   </body>

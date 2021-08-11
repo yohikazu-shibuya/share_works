@@ -5,10 +5,10 @@ class Genre < ActiveHash::Base
     { id: 3, name: 'アプリ' },
     { id: 4, name: '決済方法' },
     { id: 5, name: 'クーポン' },
-    { id: 6, name: 'キャンペーン' },
+    { id: 6, name: 'キャンペーン' }
   ]
 
   include ActiveHash::Associations
-  has_many :notices
+  has_many :notices, :qas
 
   end

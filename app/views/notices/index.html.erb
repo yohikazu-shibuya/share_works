@@ -28,9 +28,9 @@
         </div><br>
 
         <div class="manual-a">
-          QA一覧
+          <%= link_to "Q&A一覧", qas_path, class: "post" %>
         </div>
-          <li><%= link_to "ポイントカード", qas_path, class: "post" %></li>
+          <li>ポイントカード</li>
           <li>アプリ</li>
           <li>キャンペーン</li>
         <div class="manual-a"><br>
@@ -52,7 +52,7 @@
                         <%= notice.created_at.strftime('%Y/%m/%d %H:%M') %><br>
                       </div>
                      <div class="notice-main-two">
-                        <%= notice.type_qa.name %>
+                        <%= notice.genre.name %>
                     </div>
                     <div class="notice-main-two">
                         <%= notice.subject %>

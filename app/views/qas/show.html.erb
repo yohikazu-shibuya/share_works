@@ -1,0 +1,9 @@
+<%= "Q&Aテスト" %>
+<% @qas.each do |qa| %>
+  <div class="notice-main-two">
+    <%= qa.question %>
+  </div>
+  <div class="notice-main-two">
+    <%= qa.answer %>
+  </div>
+<% end %>

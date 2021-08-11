@@ -16,9 +16,12 @@ class QasController < ApplicationController
     end
   end
 
+def show
+  @qas = Qa.all
+end
+
   private
   def qa_params
-    params.require(:qa).permit(type_qa_id, :question, :answer)
-
+    params.require(:qa).permit(:genre_id, :subject, :question, :answer).merge(user_id: current_user.id)
   end
 end
