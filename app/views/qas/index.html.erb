@@ -34,12 +34,11 @@
                         </div>
                         <div class="notice-main-two">
                           <div class="notice-side-one">
-                          <%= link_to "QA追加", qa_path(:id), class: "get" %>
                               <div class="notice-main-two">
                                 <%= qa.genre.name %>
                               </div>
                               <div class="notice-main-two">
-                                <%= qa.subject %>
+                                <%= link_to qa.subject, qa_path(:id), class: "get" %>
                               </div>
                               </div>
                               </div>
