@@ -1,12 +1,12 @@
 <%= render "devise/shared/header" %>
 
-<%= form_with model: @manual, local: true do |f|%>
+<%= form_with model: @notice, local: true do |f|%>
 
 <%= f.text_area :type_qa, placeholder:"例) カテゴリ" %><br>
 
 <%= f.text_area :subject, placeholder:"例) 件名" %><br>
 
-<%= f.text_area :notice, placeholder:"例) 質問" %><br>
+<%= f.text_area :notice, placeholder:"例) 内容" %><br>
 <%= f.submit "保存する", class: :form__btn %>
 
 <% end %>

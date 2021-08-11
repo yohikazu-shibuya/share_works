@@ -18,7 +18,6 @@ class NoticesController < ApplicationController
 
   private
   def notice_params
-    params.require(:type_qa, :subject, :notice)
+    params.require(:notice).permit(:type_qa, :subject, :notice)
   end
-end
 end

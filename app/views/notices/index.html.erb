@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>
+    <link rel="stylesheet" href="style.css">
+    </title>
+  </head>
+  <body>
+  <%= render "devise/shared/header" %>
+
+    <div class="main">
+    <% if user_signed_in? %>
+    <div class="manual-body">
+      
+           <div class="manual-side">
+        <div class="manual-side-menu">
+          メニュー
+        </div>
+        <div class="manual-a">
+          マニュアル一覧
+        </div>
+          <li>ポイントカード</li>
+          <li>アプリ</li>
+          <li>キャンペーン</li>
+        <div class="manual-a">
+
+        </div><br>
+
+        <div class="manual-a">
+          QA一覧
+        </div>
+          <li><%= link_to "ポイントカード", qas_path, class: "post" %></li>
+          <li>アプリ</li>
+          <li>キャンペーン</li>
+        <div class="manual-a"><br>
+        <%= link_to "お知らせ追加", new_notice_path, class: "post" %>
+        </div>
+        <%= link_to "QA追加", new_qa_path, class: "post" %>
+
+      </div>
+
+      <div class="manual-list">
+        <span class="manual-list-menu">
+          お知らせ
+        </span>
+          <div class="notice-top">
+            <% @notices.each do |notice| %>
+                  <div class="notice-side-one">
+                    日時
+                      <div class="notice-main-one">
+                        <%= notice.created_at.strftime('%Y/%m/%d %H:%M') %><br>
+                      </div>
+                    <div class="notice-main-two">
+                        <%= notice.subject %>
+                    </div>
+                    <div class="notice-main-two">
+                        <%= notice.notice %>
+                    </div>
+                     <%= link_to "QAへ", qas_path, class: "post" %>
+                  </div>
+                </div>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  
+    <% else %> 
+      <div class="main-menu">
+        <div class="main-center">
+            <div class="login-in">
+              <%= link_to "ログイン", user_session_path, class: "post" %><br>
+            </div>
+            <div class="login-new">
+              <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+            </div>
+        </div>
+      </div>
+    <% end %>
+
+    </div>
+  </body>
+  <%= render "devise/shared/footer" %>
+</html>
