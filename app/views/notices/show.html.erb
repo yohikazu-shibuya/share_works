@@ -1,11 +1,11 @@
 <%= render "devise/shared/header" %>
 
 <%= "Q&Aテスト" %>
-<% @qas.each do |qa| %>
+<% @notices.each do |notice| %>
   <div class="notice-main-two">
-    <%= qa.question %>
+    <%= notice.subject %>
   </div>
   <div class="notice-main-two">
-    <%= qa.answer %>
+    <%= notice.notice %>
   </div>
 <% end %>

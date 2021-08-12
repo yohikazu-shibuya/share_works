@@ -55,11 +55,9 @@
                         <%= notice.genre.name %>
                     </div>
                     <div class="notice-main-two">
-                        <%= notice.subject %>
+                        <%= link_to notice.subject, notice_path(notice.id), class: "post" %>
                     </div>
-                    <div class="notice-main-two">
-                        <%= notice.notice %>
-                    </div>
+
                      <%= link_to "QAへ", qas_path, class: "post" %>
                   </div>
                 </div>
