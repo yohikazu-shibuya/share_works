@@ -37,13 +37,18 @@
         <%= link_to "お知らせ追加", new_notice_path, class: "post" %>
         </div>
         <%= link_to "QA追加", new_qa_path, class: "post" %>
-
       </div>
 
       <div class="manual-list">
-        <span class="manual-list-menu">
-          お知らせ
-        </span>
+        <div class="notice-header-list">
+          <span class="manual-list-menu">
+            お知らせ
+          </span>
+            <%= form_with(model: @notice, local: true) do |f|%>
+            <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>
+            <% end %>
+        </div>
+
           <div class="notice-top">
             <% @notices.each do |notice| %>
                   <div class="notice-side-one">

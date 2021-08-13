@@ -1,11 +1,25 @@
 <%= render "devise/shared/header" %>
 
-<%= "Q&Aテスト" %>
-<% @notices.each do |notice| %>
-  <div class="notice-main-two">
-    <%= notice.subject %>
+<div class="notices-main">
+  <%= "Q&Aテスト" %>
+  <% @notices.each do |notice| %>
+  <div class="notices">
+          <div class="notices-sub">
+            <div class="notices-subjects">
+            件名
+            </div>
+              <div class="notice-main-two">
+                <%= notice.subject %>
+              </div>
+          </div>
+                  <div class="notice-text">
+                  本文
+                  </div>
+              <div class="notice-main-three">
+                <%= notice.notice %>
+              </div>
+
   </div>
-  <div class="notice-main-two">
-    <%= notice.notice %>
-  </div>
-<% end %>
+  <% end %>
+</div>
+<%= render "devise/shared/footer" %>
