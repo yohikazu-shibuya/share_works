@@ -129,10 +129,6 @@ height: 100vh;
 }
 
 
-// .notice-top{
-//   border:solid;
-//   border-color: white;
-// }
 
 .notice-side-one{
   display: flex;
@@ -140,12 +136,21 @@ height: 100vh;
 
 .notice-main-one{
   margin-left: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-top: 3px;
 }
 
 .notice-main-two{
-  padding-right: 15px;
+  font-size: 15px;
+  margin-right: 10px;
+  margin-top: 3px;
 }
+
+.notice-main-three{
+  font-size: 15px;
+  margin-right: 10px;
+  margin-top: 3px;
+  }
 
 .footer {
   border-top:solid;
@@ -163,28 +168,30 @@ height: 100vh;
 .notices-sub{
   border:solid;
   border-color: rgb(142, 199, 246);
-
   display: flex;
 }
+
 .notices-subjects{
 padding-top: 10px;
 padding-bottom: 10px;
-
 }
-.notice-main-two{
-font-size: 15px;
-padding-left: 20px;
-padding-top: 10px;
-padding-bottom: 10px;
-
+.notice-show-two{
+  font-size: 15px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
 }
 
-.notice-main-three{
+.notice-show-three{
   font-size: 15px;
   height: 400px;
   border:solid;
   border-color: rgb(142, 199, 246);
   }
+ .notice-main-out{
+   margin-bottom: 5px;
+ }
   
   .notice-text{
     margin-top: 20px;

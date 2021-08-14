@@ -1,11 +1,13 @@
 <%= render "devise/shared/header" %>
 
+<div class="notices-main">
 <%= form_with model: @qa, local: true do |f|%>
 <%= "Q&Aを追加" %><br>
 <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>
-<%= f.text_area :subject, placeholder:"例) 件名" %><br>
-<%= f.text_area :question, placeholder:"例) 質問" %><br>
-<%= f.text_area :answer, placeholder:"例) 回答" %><br>
+<%= f.text_area :subject, placeholder:"例) 件名", size: "40x2"  %><br>
+<%= f.text_area :question, placeholder:"例) 質問", size: "40x20"  %><br>
+<%= f.text_area :answer, placeholder:"例) 回答", size: "40x20"  %><br>
 <%= f.submit "保存する", class: :form__btn %>
-
+</div>
 <% end %>
+<%= render "devise/shared/footer" %>
