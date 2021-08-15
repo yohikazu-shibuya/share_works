@@ -1,6 +1,7 @@
 <%= render "devise/shared/header" %>
 
 <div class="notices-main">
+
 <%= form_with model: @qa, local: true do |f|%>
 <%= "Q&Aを追加" %><br>
 <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>

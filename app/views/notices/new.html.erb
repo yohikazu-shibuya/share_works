@@ -1,6 +1,6 @@
 <%= render "devise/shared/header" %>
-
 <div class="notices-main">
+<%= "皆へお知らせ" %>
 <%= form_with(model: @notice, local: true) do |f|%>
 
 <%= f.collection_select(:genre_id, Genre.all, :id, :name, {},) %><br><br>
