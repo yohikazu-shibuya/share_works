@@ -5,6 +5,7 @@ class QasController < ApplicationController
 
   def new
     @qa = Qa.new
+
   end
   
   def create
@@ -19,6 +20,7 @@ class QasController < ApplicationController
 def show
   @qas = Qa.all
   @qas = Qa.where(id: params[:id])
+  # @qas = Qa.find(params[:id])
 end
 
   private

@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: "notices#index"
   resources :notices
   resources :manuals
-  resources :qas
+  resources :qas do
+    resources :messages
+  end
 end
