@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ManualsControllerTest < ActionDispatch::IntegrationTest
+class QaTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

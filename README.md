@@ -12,7 +12,7 @@
 - パスワード123abc
 
 # 利用方法
-- 各マニュアルを追加、またマニュアル以外のQAを追加できる
+- 各マニュアルを追加・閲覧、QAを追加できる
 
 # 目指した課題解決
 - マニュアルはきちんと用意はされているが、マニュアルに記載がないことで、
@@ -42,11 +42,57 @@
 # テーブル設計
 
 # usersテーブル
-@@ -79,5 +38,5 @@
-- belongs_to :user
-- has_one :manual
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false |
+| last_name          | string | null: false |
+| first_name         | string | null: false |
+| last_name_kana     | string | null: false |
+| first_name_kana    | string | null: false |
+| affiliation        | string | null: false |
+
+### Association
+- has_many :
+- has_many :
+
+# noticesテーブル
+| Column                 | Type       | Options                        |
+| ---------------------- | ---------- | ------------------------------ |
+| type_qa                | integer    | null: false                    |
+| subject                | string     | null: false                    |
+| notice                 | string     | null: false                    |
+| user                   | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :
+- has_one :
+
+# manualsテーブル
+| Column     | Type       | Options                                     |
+| ---------- | ---------- | ------------------------------------------- |
+| type_qa                 | integer    | null: false                    |
+| subject                 | string     | null: false                    |
+| question                | text       | null: false                    |
+| answer                  | text       | null: false                    |
+| user                    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :
+- belongs_to :
+- has_one :
+
+# qasテーブル
+| Column     | Type       | Options                                     |
+| ---------- | ---------- | ------------------------------------------- |
+| type_qa                 | integer    | null: false                    |
+| subject                 | string     | null: false                    |
+| question                | text       | null: false                    |
+| answer                  | text       | null: false                    |
+| user                    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :
 
  # ローカルでの動作方法
  - 作成予定
-# ローカルでの動作方法
-- 作成予定

@@ -10,7 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_06_125910) do
+ActiveRecord::Schema.define(version: 2021_08_17_052256) do
+
+  create_table "manuals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "genre_id", null: false
+    t.string "subject", null: false
+    t.text "question", null: false
+    t.text "answer", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_manuals_on_user_id"
+  end
+
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "subject", null: false
+    t.text "message", null: false
+    t.bigint "user_id"
+    t.bigint "notice_id"
+    t.bigint "qa_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["notice_id"], name: "index_messages_on_notice_id"
+    t.index ["qa_id"], name: "index_messages_on_qa_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "notices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "genre_id", null: false
+    t.string "subject", null: false
+    t.text "notice", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_notices_on_user_id"
+  end
+
+  create_table "qas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "genre_id", null: false
+    t.string "subject", null: false
+    t.text "question", null: false
+    t.text "answer", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_qas_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,4 +74,10 @@ ActiveRecord::Schema.define(version: 2021_08_06_125910) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "manuals", "users"
+  add_foreign_key "messages", "notices"
+  add_foreign_key "messages", "qas"
+  add_foreign_key "messages", "users"
+  add_foreign_key "notices", "users"
+  add_foreign_key "qas", "users"
 end

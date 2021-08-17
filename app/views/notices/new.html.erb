@@ -1,0 +1,14 @@
+<%= render "devise/shared/header" %>
+<div class="notices-main">
+<%= "皆へお知らせ" %>
+<%= form_with(model: @notice, local: true) do |f|%>
+
+<%= f.collection_select(:genre_id, Genre.all, :id, :name, {},) %><br><br>
+
+<%= f.text_area :subject, placeholder:"例) 件名", size: "40x2" %><br>
+
+<%= f.text_area :notice, placeholder:"例) 内容", size: "40x20" %><br>
+<%= f.submit "保存する", class: :form__btn %>
+</div>
+<% end %>
+<%= render "devise/shared/footer" %>

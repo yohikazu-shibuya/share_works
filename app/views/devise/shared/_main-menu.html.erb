@@ -1,0 +1,20 @@
+      <div class="manual-list">
+        <span class="manual-list-menu">
+          項目別
+        </span>
+          <% @manuals.each do |manual| %>
+            <div class="question-top">
+              質問
+            </div>
+        <div class="comments">
+          <%= manual.question %><br>
+        </div>
+        <div class="answer-top">
+          回答
+        </div>
+          <div class="comments">
+          <%= manual.answer %><br><br>
+     </div><br>
+        <% end %>
+      </div>
+    </div>

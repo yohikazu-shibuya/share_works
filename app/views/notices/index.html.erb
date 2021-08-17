@@ -28,33 +28,45 @@
         </div><br>
 
         <div class="manual-a">
-          QA一覧
+          <%= link_to "Q&A一覧", qas_path, class: "post" %>
         </div>
-          <li><%= link_to "ポイントカード", qas_path, class: "post" %></li>
+          <li>ポイントカード</li>
           <li>アプリ</li>
           <li>キャンペーン</li>
         <div class="manual-a"><br>
-        <%= link_to "お知らせ追加", new_manual_path, class: "post" %>
+        <%= link_to "お知らせ追加", new_notice_path, class: "post" %>
         </div>
         <%= link_to "QA追加", new_qa_path, class: "post" %>
-
       </div>
 
       <div class="manual-list">
-        <span class="manual-list-menu">
-          お知らせ
-        </span>
+        <div class="notice-header-list">
+          <span class="manual-list-menu">
+            お知らせ
+          </span>
+            <%= form_with(model: @notice, local: true) do |f|%>
+            <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>
+            <% end %>
+        </div>
+
           <div class="notice-top">
-            <% @manuals.each do |manual| %>
+            <% @notices.each do |notice| %>
                   <div class="notice-side-one">
+                  <div class="notice-main-in">
                     日時
+                  </div>
                       <div class="notice-main-one">
-                        <%= manual.created_at.strftime('%Y/%m/%d %H:%M') %><br>
+                        <%= notice.created_at.strftime('%Y/%m/%d %H:%M') %><br>
                       </div>
-                    <div class="notice-main-two">
-                        <%= manual.notice %>
+                     <div class="notice-main-two">
+                        <%= notice.genre.name %>
                     </div>
+                    <div class="notice-main-three">
+                        <%= link_to notice.subject, notice_path(notice.id), class: "post" %>
+                    </div>
+                     <div class="notice-main-out">
                      <%= link_to "QAへ", qas_path, class: "post" %>
+                     </div>
                   </div>
                 </div>
             <% end %>

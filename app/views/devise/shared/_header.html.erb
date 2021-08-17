@@ -3,7 +3,9 @@
       <%= link_to "share_works", root_path, class: "post" %>
         <% if user_signed_in? %>
           <div class="light-header">
-            <%= link_to current_user.last_name, class: "name" %>
+            <%= current_user.last_name %>
+            <%= current_user.first_name %>
+            <%= current_user.affiliation %>
             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
           </div>
         <% end %>
