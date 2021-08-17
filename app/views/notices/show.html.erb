@@ -4,10 +4,10 @@
   <%= "お知らせテスト" %>
   <% @notices.each do |notice| %>
   <div class="notices">
+          <div class="notices-subjects">
+          件名
+          </div>
           <div class="notices-sub">
-            <div class="notices-subjects">
-            件名
-            </div>
               <div class="notice-show-two">
                 <%= notice.subject %>
               </div>

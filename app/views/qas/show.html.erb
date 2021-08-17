@@ -1,14 +1,24 @@
 <%= render "devise/shared/header" %>
 
 <div class="notices-main">
-<%= "Q&Aテスト" %>
-<% @qas.each do |qa| %>
-  <div class="notice-main-two">
-    <%= qa.question %>
-  </div>
-  <div class="notice-main-two">
-    <%= qa.answer %>
-  </div>
-<% end %>
+  <%= "Q&Aテスト" %>
+    <% @qas.each do |qa| %>
+      <div class="notices">
+              <div class="notices-subjects">
+              質問
+              </div>
+              <div class="notices-sub">
+              <div class="notice-main-two">
+                <%= qa.question %>
+              </div>
+              </div>
+              <div class="notice-text">
+              回答
+              </div>
+              <div class="notice-show-three">
+                <%= qa.answer %>
+              </div>
+    <% end %>
+    </div>
 </div>
 <%= render "devise/shared/footer" %>
