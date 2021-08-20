@@ -5,7 +5,7 @@ class QasController < ApplicationController
 
   def new
     @qa = Qa.new
-
+    @Message = Message.new
   end
   
   def create
@@ -18,9 +18,12 @@ class QasController < ApplicationController
   end
 
 def show
-  @qas = Qa.all
-  @qas = Qa.where(id: params[:id])
-  # @qas = Qa.find(params[:id])
+  @user = User.find(params[:id]) 
+  @qa = Qa.where(user_id: current_user.id)
+  # @qa = Qa.where(id: params[:id])
+  @Message = Message.new
+  @Messages = @qa.messages.includes(:user)
+
 end
 
   private

@@ -26,14 +26,14 @@ ActiveRecord::Schema.define(version: 2021_08_17_052256) do
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "subject", null: false
     t.text "message", null: false
-    t.bigint "user_id"
-    t.bigint "notice_id"
-    t.bigint "qa_id"
+    t.bigint "user_id_id"
+    t.bigint "notice_id_id"
+    t.bigint "qa_id_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["notice_id"], name: "index_messages_on_notice_id"
-    t.index ["qa_id"], name: "index_messages_on_qa_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
+    t.index ["notice_id_id"], name: "index_messages_on_notice_id_id"
+    t.index ["qa_id_id"], name: "index_messages_on_qa_id_id"
+    t.index ["user_id_id"], name: "index_messages_on_user_id_id"
   end
 
   create_table "notices", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -75,9 +75,6 @@ ActiveRecord::Schema.define(version: 2021_08_17_052256) do
   end
 
   add_foreign_key "manuals", "users"
-  add_foreign_key "messages", "notices"
-  add_foreign_key "messages", "qas"
-  add_foreign_key "messages", "users"
   add_foreign_key "notices", "users"
   add_foreign_key "qas", "users"
 end
