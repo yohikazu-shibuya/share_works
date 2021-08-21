@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
   def index
+    @message = Message.new
+    @messages = @qas.messages.includes(:user)
   end
 
   def create
