@@ -5,7 +5,13 @@ class MessagesController < ApplicationController
   end
 
   def create
-    Message.create(message_params)
+    @message = Message.new(message_params)
+    @message.user_id = current_user.id
+    if @message.save
+      redirect_back(fallback_location: root_path)
+    else
+      redirect_back(fallback_location: root_path)
+    end
   end
 
   private

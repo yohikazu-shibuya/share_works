@@ -21,12 +21,8 @@ def show
   @user = User.find(params[:id])
   @qa = Qa.where(user_id: current_user.id)
   @message = Message.new
-  # @messages = @qa.messages.includes(:user)
-  # @message = Message.where(user_id: current_user.id)
-  # @qa = Qa.where(user_id: current_user.id)
   @qas = Qa.where(id: params[:id])
-  # @message = Message.new
-  # @messages = @qa.messages.includes(:user)
+
 
 end
 
