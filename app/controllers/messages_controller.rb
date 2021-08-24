@@ -5,31 +5,22 @@ class MessagesController < ApplicationController
     @qa = Qa.find(params[:qa_id])
   end
 
-  # def new
-  #   @qa = Qa.new
-  #   @message = Message.new
-  # end
-
   def create
-    # @qa = Qa.find_by(id: params[:qa_id])
     @message = Message.new(message_params)
     @message.user_id = current_user.id
-    @message.save
-    redirect_to root_path
+    
+    if @message.save
+      redirect_to root_path
+    else
+   end
   end
 
-
-    # @qa = Qa.find_by(id: params[:qa_id])
-    # @message = @Qa.message.new(message_params)
-    # @message.user_id = current_user.id
-
-    # @message = Message.new(message_params)
-    
-    # if @message.save
-    #   redirect_to qa_path(qa.id)
-    # else
-    #   redirect_to root_path
-    # end
+  def show
+    @user = User.find(params[:id])
+    @message = Message.find_by(user_id: current_user.id)
+    @message = Message.new
+    @Messages = Message.where(id: params[:id])
+  end
 
   private
   def message_params

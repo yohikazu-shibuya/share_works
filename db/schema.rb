@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_052256) do
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "subject"
+    t.text "subject"
     t.text "message"
     t.bigint "qa_id"
     t.bigint "user_id"
