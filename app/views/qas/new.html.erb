@@ -1,14 +1,31 @@
 <%= render "devise/shared/header" %>
+ <div class="notice-main">
+    <div class="notice-body">
+      
+      <div class="manual-side">
+        <div class="manual-side-menu">
+          メニュー
+        </div>
+        <div class="manual-a">
+          <%= link_to "メインメニュー", root_path, class: "post" %>
+        </div>
+        <div class="manual-a"><br>
+          <%= link_to "お知らせ追加", new_notice_path, class: "post" %>
+        </div>
+          <%= link_to "QA追加", new_qa_path, class: "post" %>
+      </div>
 
-<div class="notices-main">
-
-<%= form_with model: @qa, local: true do |f|%>
-<%= "Q&Aを追加" %><br>
-<%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>
-<%= f.text_area :subject, placeholder:"例) 件名", size: "40x2"  %><br>
-<%= f.text_area :question, placeholder:"例) 質問", size: "40x20"  %><br>
-<%= f.text_area :answer, placeholder:"例) 回答", size: "40x20"  %><br>
-<%= f.submit "保存する", class: :form__btn %>
+  <div class="notices-new-main">
+    <div class="notice-main-word">
+      <%= "Q&Aを追加" %>
+    </div>
+    <%= form_with model: @qa, local: true do |f|%>
+      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>
+      <%= f.text_area :subject, placeholder:"例) 件名", size: "40x2"  %><br>
+      <%= f.text_area :question, placeholder:"例) 質問", size: "80x20"  %><br>
+      <%= f.text_area :answer, placeholder:"例) 回答", size: "80x20"  %><br>
+      <%= f.submit "保存する", class: "button" %>
+    <% end %>
+  </div>
 </div>
-<% end %>
 <%= render "devise/shared/footer" %>

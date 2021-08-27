@@ -21,8 +21,10 @@
 
                   <div class="manual-list">
                     <span class="manual-list-menu">
-                      ポイントカードについてのQA<br>
-                      ※ここにはプルダウンで、各項目を選択できるようにする。
+                      ポイントカードについてのQA
+                                <%= form_with(model: @notice, local: true) do |f|%>
+                      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br>
+                      <% end %>
                     </span><br>
 
                 <div class="notice-top">
