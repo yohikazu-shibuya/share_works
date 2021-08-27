@@ -15,12 +15,12 @@ class MessagesController < ApplicationController
    end
   end
 
-  def show
-    @user = User.find(params[:id])
-    @message = Message.find_by(user_id: current_user.id)
-    @message = Message.new
-    @Messages = Message.where(id: params[:id])
-  end
+  # def show
+  #   @user = User.find(params[:id])
+  #   @message = Message.find_by(user_id: current_user.id)
+  #   @message = Message.new
+  #   # @Messages = Message.where(id: params[:id])
+  # end
 
   private
   def message_params

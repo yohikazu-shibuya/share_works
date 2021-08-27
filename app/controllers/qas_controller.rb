@@ -18,10 +18,12 @@ class QasController < ApplicationController
   end
 
 def show
-  @user = User.find(params[:id])
-  @qa = Qa.find_by(user_id: current_user.id)
-  @message = Message.new
+  @qa = Qa.find(params[:id])
   @qas = Qa.where(id: params[:id])
+  # @qa = Qa.find_by(user_id: current_user.id)
+  @message = Message.new
+  @messages = @qa.messages
+  # @user = User.find(params[:id])
 end
 
   private
