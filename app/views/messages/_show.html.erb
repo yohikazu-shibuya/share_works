@@ -1,9 +1,12 @@
 <div class="message-main">
-  
-  <% @messages.each do |message| %>
+  <div class="message-addition">
+    <%= "追加情報" %>
+  </div>
+  <% @messages.each_with_index do |message, i| %>
+    <%# <% @messages.each_with_index do |i, x|%>
     <div class="message-under-line">
     <div class="message-subjects">
-    確認
+    <%= "（#{i+1}）確認" %>
     </div>
     <div class="message-sub">
       <div class="message-main-two">
@@ -17,6 +20,7 @@
       <%= message.message %>
     </div><br>
    </div> 
+   <%# <% end%>
   <% end %>
 
   <div class="message-comment-main">

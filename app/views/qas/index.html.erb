@@ -1,66 +1,80 @@
 <%= render "devise/shared/header" %>
-
-    <div class="main">
-      <% if user_signed_in? %>
-        <div class="manual-body">
-            
-          <div class="manual-side">
-            <div class="manual-side-menu">
-              メニュー
-            </div>
-            <div class="manual-a">
-              QA一覧
-            </div><br>
-                      
-              <div class="manual-a">
-                <%= link_to "お知らせ追加", new_manual_path, class: "post" %>
+  <html>  
+    <body>
+      <div class="main">
+        <% if user_signed_in? %>
+          <div class="manual-body">
+            <div class="manual-side">
+              <div class="manual-side-menu">
+                メニュー
               </div>
-              <div class="manual-a">
-                <%= link_to "QA追加", new_qa_path, class: "post" %>
+                <div class="manual-a">
+                  <%= link_to "お知らせ一覧へ", root_path, class: "post" %>
+                </div><br>
+                  <div class="manual-a">
+                    <%= link_to "お知らせ追加", new_notice_path, class: "post" %>
+                  </div>
+                  <div class="manual-a">
+                    <%= link_to "QA追加", new_qa_path, class: "post" %>
+                  </div>
               </div>
-          </div>
 
-                <div class="manual-list">
-                  <span class="manual-list-menu">
-                    ポイントカードについてのQA<br>
-                    ※にここにはプルダウンで、各項目を選択できるようにする。
-                  </span><br><br>
-                  <div class="notice-top">
-                    <% @qas.each do |qa| %>
-                      <div class="notice-side-one">
-                        日時
-                        <div class="notice-main-one">
-                          <%= qa.created_at.strftime('%Y/%m/%d %H:%M') %><br>
-                        </div>
-                        <div class="notice-main-two">
-                          <div class="notice-side-one">
-                              <div class="notice-main-two">
-                                <%= qa.genre.name %>
-                              </div>
-                              <div class="notice-main-two">
-                                <%= link_to qa.subject, qa_path(qa.id), class: "get" %>
-                              </div>
-                              </div>
-                              </div>
-                            </div>
-                      <% end %>
+                  <div class="manual-list">
+                    <span class="manual-list-menu">
+                      ポイントカードについてのQA<br>
+                      ※ここにはプルダウンで、各項目を選択できるようにする。
+                    </span><br>
+
+                <div class="notice-top">
+                  <div class="notice-main-main">
+                    <div class="notice-main-in">
+                      日時
+                    </div>
+                    <div class="notice-main-category">
+                      カテゴリ
+                    </div>
+                    <div class="notice-main-contents">
+                      内容
+                    </div>
+                    <div class="notice-main-author">
+                      入力者
+                    </div>
+                  </div>
+    
+                  <% @qas.each do |qa| %>
+                    <div class="notice-side-one">
+                      <div class="notice-main-one">
+                        <%= qa.created_at.strftime('%Y/%m/%d %H:%M') %><br>
                       </div>
+                      <div class="notice-main-two">
+                        <%= qa.genre.name %>
+                      </div>
+                      <div class="notice-main-three">
+                        <%= link_to qa.subject, qa_path(qa.id), class: "get" %>
+                      </div>
+                      <div class="notice-main-force">
+                        <%= qa.user.last_name %>
+                        <%= qa.user.first_name %>
+                      </div>         
+                    </div>
+                  <% end %>
+                        </div>
+                    </div>
                   </div>
                 </div>
-              
-              <% else %> 
-              <div class="main-menu">
-                <div class="main-center">
-                    <div class="login-in">
-                      <%= link_to "ログイン", user_session_path, class: "post" %><br>
-                    </div>
-                    <div class="login-new">
-                      <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-                    </div>
+                <% else %> 
+                <div class="main-menu">
+                  <div class="main-center">
+                      <div class="login-in">
+                        <%= link_to "ログイン", user_session_path, class: "post" %><br>
+                      </div>
+                      <div class="login-new">
+                        <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+                      </div>
+              </div>
             </div>
-          </div>
-        <% end %>
-    </div>
-  </body>
-  <%= render "devise/shared/footer" %>
-</html>
+          <% end %>
+      </div>
+    </body>
+  </html>
+<%= render "devise/shared/footer" %>

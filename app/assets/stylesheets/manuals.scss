@@ -17,14 +17,14 @@
   
 }
 .login-center{
-padding-top: 60px;
-margin: auto;
-border:solid;
-border-color: rgb(142, 199, 246);
-height: 190px;
-width: 170px;
-background-color: #def7ff;
-text-align: center;
+  padding-top: 60px;
+  margin: auto;
+  border:solid;
+  border-color: rgb(142, 199, 246);
+  height: 190px;
+  width: 170px;
+  background-color: #def7ff;
+  text-align: center;
 }
 
 //新規登録画面
@@ -54,7 +54,7 @@ text-align: center;
 }
 
 //メイン画面(ログイン)
-  .main-menu {
+.main-menu {
   padding-top: 130px;
   padding-bottom: 30px;
   height: 100vh;
@@ -125,30 +125,69 @@ text-align: center;
   background-color: white;
   box-sizing: border-box;
 }
-
-.notice-side-one{
-  display: flex;
+//お知らせ入力画面
+.notice-main-word{
+  font-size: 20px;
+  padding-top: 5px;
+  margin-bottom: 5px;
 }
 
+.notice-main-main{
+  display: flex;
+  margin-bottom: 5px;
+}
+.notice-main-in {
+  width: 160px;
+  height: 20px;
+  padding-left: 5px;
+}
+.notice-main-category {
+  width: 130px;
+  height: 20px;
+  padding-left: 5px;
+}
+.notice-main-contents{
+  width: 300px;
+  height: 20px;
+  padding-left: 5px;
+}
+.notice-main-author{
+  width: 110px;
+  height: 20px;
+  padding-left: 5px;
+}
+.notice-side-one{
+  margin-bottom: 5px;
+  display: flex;
+}
 .notice-main-one{
+  width: 150px;
+  height: 20px;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 3px;
 }
-
 .notice-main-two{
+  width: 130px;
+  height: 20px;
   padding-left: 5px;
   font-size: 15px;
-  margin-right: 10px;
   margin-top: 3px;
 }
-
 .notice-main-three{
+  width: 300px;
+  height: 20px;
   font-size: 15px;
   margin-right: 10px;
   margin-top: 3px;
   }
+.notice-main-force{
+  width: 200px;
+  height: 20px;
+  font-size: 15px;
 
+  margin-top: 3px;
+}
 .footer {
   border-top:solid;
   border-color: rgb(142, 199, 246);
@@ -173,6 +212,7 @@ text-align: center;
 
 .notices-subjects{
 padding-top: 5px;
+font-size: 20px;
 }
 .notice-show-two{
   font-size: 15px;
@@ -200,28 +240,62 @@ padding-top: 5px;
   
 .notice-text{
   margin-top: 20px;
+  font-size: 20px;
 }
 
-
 //qa回答画面
+.qa-title-main{
+  padding-top: 20px;
+  font-size: 20px;
+  display: flex;
+}
+.qa-title{
+  margin-right: 20px;
+}
+
+.qa-show-two{
+  border-bottom:solid 1px;
+  border-color: rgb(142, 199, 246);
+  margin-right: 20px;
+  padding-left: 5px;
+}
+.qa-subjects{
+  padding-top: 20px;
+  font-size: 20px;
+  color: red;
+}
+.qa-show-three{
+  padding-left: 5px;
+}
+.qa-text{
+  margin-top: 20px;
+  font-size: 20px;
+  color: blue;
+}
+
+//meesage部分について
 .message-main{
   background-color: #def7ff;
 }
+.message-addition{
+  font-size: 20px;
+}
 .message-sub{
-  margin-right: 10px;
-  background-color: white;
-  border:solid 1px;
+  border-bottom:solid 1px;
   border-color: rgb(142, 199, 246);
+  margin-right: 10px;
   display: flex;
 }
 .message-subjects{
   padding-top: 5px;
 }
 .message-main-two{
+
   font-size: 15px;
   padding-left: 5px;
   margin-right: 10px;
   margin-top: 3px;
+
 }
 .message-show-three{
   font-size: 15px;
@@ -229,10 +303,8 @@ padding-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 10px;
-  height: 100px;
-  background-color: white;
-  border:solid 1px;
-  border-color: rgb(142, 199, 246);
+  height: 50px;
+
   }
 .message-text{
   margin-top: 20px;
@@ -240,8 +312,7 @@ padding-top: 5px;
 
 .message-under-line {
   padding-top: 5px;
-  border-top:solid 1px;
-  border-color: rgb(142, 199, 246);
+
 }
 
 .message-comment-main{

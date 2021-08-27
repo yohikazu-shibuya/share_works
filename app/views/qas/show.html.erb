@@ -1,22 +1,24 @@
 <%= render "devise/shared/header" %>
 
 <div class="notices-main">
-  <%= "Q&Aテスト" %>
-  <%= link_to "QA一覧へ", qas_path, class: "post" %>
+  <div class="qa-title-main">
+    <div class="qa-title">
+      <%= "Q&Aテスト" %>
+    </div>
+    <%= link_to "QA一覧へ", qas_path, class: "post" %>
+  </div>
     <% @qas.each do |qa| %>
       <div class="notices">
-              <div class="notices-subjects">
-              お問い合わせ
+              <div class="qa-subjects">
+              Q.
               </div>
-              <div class="notices-sub">
-              <div class="notice-main-two">
-                <%= qa.question %>
+                <div class="qa-show-two">
+                  <%= qa.question %>
+                </div>
+              <div class="qa-text">
+              A.
               </div>
-              </div>
-              <div class="notice-text">
-              回答
-              </div>
-              <div class="notice-show-three">
+              <div class="qa-show-three">
                 <%= qa.answer %>
               </div><br><br>
         <% end %>
