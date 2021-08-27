@@ -6,7 +6,7 @@
     <%# <% @messages.each_with_index do |i, x|%>
     <div class="message-under-line">
     <div class="message-subjects">
-    <%= "（#{i+1}）確認" %>
+    <%= "(#{i+1})確認" %>
     </div>
     <div class="message-sub">
       <div class="message-main-two">
@@ -27,8 +27,8 @@
     <%= "追記" %>
       <%= form_with(model: [@qa, @message], method: :post) do |f|%>
                 <%= f.text_area :subject, placeholder:"例) 件名", size: "40x2"  %><br>
-                <%= f.text_area :message, placeholder:"例) コメンツ", size: "40x20"  %><br>
-                <%= f.submit '送信', class: 'form-submit' %>
+                <%= f.text_area :message, placeholder:"例) コメンツ", size: "80x20"  %><br>
+                <%= f.submit '保存', class: "button" %>
       <% end %>
   </div>
 </div>

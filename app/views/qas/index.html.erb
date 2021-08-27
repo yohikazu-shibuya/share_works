@@ -20,12 +20,17 @@
               </div>
 
                   <div class="manual-list">
+                  <div class="notice-header-list">
                     <span class="manual-list-menu">
                       ポイントカードについてのQA
-                                <%= form_with(model: @notice, local: true) do |f|%>
-                      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br>
+                    </span>
+                      <div class="notice-list-menu-two">
+                      <%= form_with(model: @notice, local: true) do |f|%>
+                        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br>
                       <% end %>
-                    </span><br>
+                      </div>
+                       </div>
+                    <br>
 
                 <div class="notice-top">
                   <div class="notice-main-main">

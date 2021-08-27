@@ -110,6 +110,15 @@
   width: 100%;
   background-color: #def7ff;
 }
+.manual-list-menu{
+  display: flex;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.notice-list-menu-two{
+  padding-top: 10px;
+  padding-left: 5px;
+}
 .notice-header-list{
   display: flex;
 }
@@ -138,7 +147,6 @@
   padding-left: 5px;
   margin-bottom: 5px;
 }
-
 .notice-main-main{
   display: flex;
   margin-bottom: 5px;
@@ -209,24 +217,25 @@
   background-color: #def7ff;
   height: 100vh;
 }
+.notice-main-word{
+  font-size: 20px;
+}
+.notices-subjects{
+  padding-top: 10px;
+  font-size: 20px;
+  color: rgb(161, 10, 10);
+}
 .notices-sub{
   margin-right: 10px;
-  background-color: white;
-  border:solid 1px;
-  border-color: rgb(142, 199, 246);
   display: flex;
-}
-
-.notices-subjects{
-padding-top: 5px;
-font-size: 20px;
+  border-bottom:solid 1px;
+  border-color: rgb(142, 199, 246);
 }
 .notice-show-two{
   font-size: 15px;
   margin-right: 10px;
   padding-left: 5px;
   padding-right: 5px;
-  padding-top: 10px;
   padding-bottom: 10px;
 }
 
@@ -235,11 +244,8 @@ font-size: 20px;
   margin-right: 10px;
   padding-left: 5px;
   padding-right: 5px;
-  padding-top: 10px;
-  height: 100px;
-  background-color: white;
-  border:solid 1px;
-  border-color: rgb(142, 199, 246);
+  padding-top: 5px;
+ 
   }
 .notice-main-out{
   margin-bottom: 5px;
@@ -248,6 +254,7 @@ font-size: 20px;
 .notice-text{
   margin-top: 20px;
   font-size: 20px;
+  color: rgb(7, 7, 176);
 }
 
 //qa回答画面
@@ -275,7 +282,7 @@ font-size: 20px;
   padding-left: 5px;
 }
 .qa-text{
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 20px;
   color: blue;
 }
@@ -295,14 +302,13 @@ font-size: 20px;
 }
 .message-subjects{
   padding-top: 5px;
+  color: rgb(161, 10, 10);
 }
 .message-main-two{
-
   font-size: 15px;
   padding-left: 5px;
   margin-right: 10px;
   margin-top: 3px;
-
 }
 .message-show-three{
   font-size: 15px;
@@ -315,6 +321,7 @@ font-size: 20px;
   }
 .message-text{
   margin-top: 20px;
+  color: rgb(7, 7, 176);
 }
 
 .message-under-line {
