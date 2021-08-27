@@ -1,6 +1,6 @@
 class QasController < ApplicationController
   def index
-    @qas = Qa.all
+    @qas = Qa.order("created_at DESC")
   end
 
   def new

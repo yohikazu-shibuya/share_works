@@ -4,4 +4,11 @@ class Notice < ApplicationRecord
   belongs_to :user
   has_many :qas
   has_many :messages
+
+  validates :subject, presence: true
+  validates :notice, presence: true
+
+  with_options numericality: { other_than: 1 } do
+    validates :genre_id
+  end
 end
