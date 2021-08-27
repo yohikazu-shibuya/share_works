@@ -52,25 +52,25 @@
           <div class="notice-top">
             <% @notices.each do |notice| %>
                   <div class="notice-side-one">
-                  <div class="notice-main-in">
-                    日時
-                  </div>
+                      <div class="notice-main-in">
+                        日時
+                      </div>
                       <div class="notice-main-one">
                         <%= notice.created_at.strftime('%Y/%m/%d %H:%M') %><br>
                       </div>
-                     <div class="notice-main-two">
+                      <div class="notice-main-two">
                         <%= notice.genre.name %>
-                    </div>
-                    <div class="notice-main-three">
-                        <%= link_to notice.subject, notice_path(notice.id), class: "post" %>
-                    </div>
-                     <div class="notice-main-out">
-                     <%= link_to "QAへ", qas_path, class: "post" %>
-                     </div>
+                      </div>
+                      <div class="notice-main-three">
+                          <%= link_to notice.subject, notice_path(notice.id), class: "post" %>
+                      </div>
+                      <div class="notice-main-out">
+                        <%= link_to "QAへ", qas_path, class: "post" %>
+                      </div>
                   </div>
-                </div>
             <% end %>
           </div>
+        </div>
       </div>
     </div>
   

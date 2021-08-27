@@ -1,29 +1,27 @@
-          <% @messages.each do |message| %>
+<% @messages.each do |message| %>
 
-      <div class="notices">
-              <div class="notices-subjects">
-              質問
-              </div>
-              <div class="notices-sub">
-              <div class="notice-main-two">
-                <%= message.subject %>
-              </div>
-              </div>
-              <div class="notice-text">
-              回答
-              </div>
-              <div class="notice-show-three">
-                <%= message.message %>
-              </div><br>
-        <% end %>
-     
-          <%= "追記" %>
-          <%= form_with(model: [@qa, @message], method: :post) do |f|%>
-             <div class="field">
-              <%= f.text_area :subject, placeholder:"例) 件名", size: "40x2"  %><br>
-              <%= f.text_area :message, placeholder:"例) コメンツ", size: "40x20"  %><br>
-              </div>
-              <div class="actions">
-              <%= f.submit '送信', class: 'form-submit' %>
-              </div>
-          <% end %>
+  <div class="message-main">
+          <div class="message-subjects">
+          質問
+          </div>
+          <div class="message-sub">
+          <div class="message-main-two">
+            <%= message.subject %>
+          </div>
+          </div>
+          <div class="message-text">
+          回答
+          </div>
+          <div class="message-show-three">
+            <%= message.message %>
+          </div><br>
+<% end %>
+  
+<%= "追記" %>
+<%= form_with(model: [@qa, @message], method: :post) do |f|%>
+
+          <%= f.text_area :subject, placeholder:"例) 件名", size: "40x2"  %><br>
+          <%= f.text_area :message, placeholder:"例) コメンツ", size: "40x20"  %><br>
+          <%= f.submit '送信', class: 'form-submit' %>
+
+<% end %>

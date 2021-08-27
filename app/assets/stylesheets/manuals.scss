@@ -43,22 +43,22 @@ text-align: center;
   background-color: #def7ff; 
 }
 .new-sessions-center{
-padding-top: 30px;
-margin: auto;
-border:solid;
-border-color: rgb(142, 199, 246);
-height: 450px;
-width: 400px;
-background-color: #def7ff;
-text-align: center;
+  padding-top: 30px;
+  margin: auto;
+  border:solid;
+  border-color: rgb(142, 199, 246);
+  height: 450px;
+  width: 400px;
+  background-color: #def7ff;
+  text-align: center;
 }
 
-//メイン画面
+//メイン画面(ログイン)
   .main-menu {
-    padding-top: 130px;
-    padding-bottom: 30px;
-    height: 100vh;
-    background-color: #def7ff;
+  padding-top: 130px;
+  padding-bottom: 30px;
+  height: 100vh;
+  background-color: #def7ff;
     
 }
 .main-center{
@@ -67,7 +67,7 @@ text-align: center;
   margin: auto;
   border:solid;
   border-color: rgb(142, 199, 246);
-  height: 170px;
+  height: 190px;
   width: 170px;
   background-color: #def7ff;
   text-align: center;
@@ -90,8 +90,8 @@ text-align: center;
 }
 
 .manual-body{
-display: flex;
-height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 .manual-side{
@@ -104,8 +104,6 @@ height: 100vh;
 .manual-side-menu{
   font-size: 20px;
 }
-
-
 .manual-list{
   font-size: 20px;
   height: 100vh;
@@ -116,9 +114,9 @@ height: 100vh;
   display: flex;
 }
 
-.manual-list-menu{
- margin-right: 20px;
-}
+// .manual-list-menu{
+//  margin-right: 20px;
+// }
 
 .container {
   margin: 20px 0;
@@ -127,8 +125,6 @@ height: 100vh;
   background-color: white;
   box-sizing: border-box;
 }
-
-
 
 .notice-side-one{
   display: flex;
@@ -192,7 +188,7 @@ padding-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 10px;
-  height: 300px;
+  height: 100px;
   background-color: white;
   border:solid 1px;
   border-color: rgb(142, 199, 246);
@@ -204,3 +200,40 @@ padding-top: 5px;
   .notice-text{
     margin-top: 20px;
 }
+
+
+//qa回答画面
+.message-main{
+  background-color: #def7ff;
+  height: 100vh;
+}
+.message-sub{
+  margin-right: 10px;
+  background-color: white;
+  border:solid 1px;
+  border-color: rgb(142, 199, 246);
+  display: flex;
+}
+.message-subjects{
+padding-top: 5px;
+}
+.message-main-two{
+  font-size: 15px;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+.message-show-three{
+  font-size: 15px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  height: 300px;
+  background-color: white;
+  border:solid 1px;
+  border-color: rgb(142, 199, 246);
+  }
+  .message-text{
+    margin-top: 20px;
+}
+

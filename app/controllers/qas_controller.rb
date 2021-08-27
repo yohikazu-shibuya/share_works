@@ -20,7 +20,7 @@ class QasController < ApplicationController
 def show
   @qa = Qa.find(params[:id])
   @qas = Qa.where(id: params[:id])
-  # @qa = Qa.find_by(user_id: current_user.id)
+  # @qa = Qa.find_by(userid: current_user.id)
   @message = Message.new
   @messages = @qa.messages
   # @user = User.find(params[:id])
