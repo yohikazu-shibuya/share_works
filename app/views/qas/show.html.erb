@@ -2,10 +2,11 @@
 
 <div class="notices-main">
   <%= "Q&Aテスト" %>
+  <%= link_to "QA一覧へ", qas_path, class: "post" %>
     <% @qas.each do |qa| %>
       <div class="notices">
               <div class="notices-subjects">
-              質問
+              お問い合わせ
               </div>
               <div class="notices-sub">
               <div class="notice-main-two">
@@ -17,10 +18,10 @@
               </div>
               <div class="notice-show-three">
                 <%= qa.answer %>
-              </div><br>
+              </div><br><br>
         <% end %>
 
-      <%= render "messages/new" %>
+      <%= render "messages/show" %>
   <%= render "devise/shared/footer" %>
   </div>
 </div>
