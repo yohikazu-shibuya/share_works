@@ -6,7 +6,6 @@
   border-color: rgb(142, 199, 246);
   
 }
-
 .one_share {
   border-bottom:solid;
   border-color: rgb(142, 199, 246);
@@ -16,59 +15,121 @@
   display: flex;
   justify-content: space-between;
 }
-
-//ログイン画面
-.login-menu {
-  padding-top: 100px;
-  padding-bottom: 30px;
-  height: 100vh;
-  background-color: #def7ff;
-  
-}
-.login-center{
-  padding-top: 60px;
-  margin: auto;
-  border:solid;
-  border-color: rgb(142, 199, 246);
-  height: 190px;
-  width: 170px;
-  background-color: #def7ff;
-  text-align: center;
-}
-
 //新規登録画面
-.new-sessions-menu-name {
-  font-size: 30px;
-  text-align: center;
-}
-.login-menu-name {
-  font-size: 30px;
-  text-align: center;
-}
 .new-sessions-menu {
-  padding-top: 100px;
-  padding-bottom: 30px;
+  padding-top: 90px;
   height: 100vh;
   background-color: #def7ff; 
 }
 .new-sessions-center{
   padding-top: 30px;
   margin: auto;
-  border:solid;
-  border-color: rgb(142, 199, 246);
-  height: 450px;
+  border:solid 2px;
+  border-color: rgb(153, 201, 241);
+  height: 580px;
   width: 400px;
   background-color: #def7ff;
   text-align: center;
 }
+.new-sessions-menu-name {
+  padding-bottom: 10px;
+  padding-left: 40px;
+  font-size: 30px;
+  text-align: left;
+}
+.session-form{
+  width: 310px;
+  height: 30px;
+}
+.session-form-name{
+  width: 150px;
+  height: 30px;
+}
+.new-sessions-buttom{
+  font-size: 15px;
+  color: #ffffff; 
+  width: 320px;
+  height: 40px;
+  border: solid 1px;
+  background    : #6171b6; 
+}
+.new-sessions-buttom:hover {
+  box-shadow    : none;
+  color         : #000066;
+  background    : #ffffff;
+}
+.sessions-menu-word-a{
+  text-align: left;
+  padding-left: 39px;
+}
+.sessions-menu-word{
+  text-align: left;
+  padding-left: 40px;
+}
+.sessions-form-name{
+  padding-bottom: 10px;
+}
+//ログイン画面
+.login-menu {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  height: 100vh;
+  background-color: #def7ff;
+}
+.login-center{
+  padding-top: 25px;
+  margin: auto;
+  border:solid 2px;
+  border-color: rgb(180, 215, 243);
+  height: 270px;
+  width: 270px;
+  background-color: #def7ff;
+  text-align: center;
+}
+.login-menu-name {
+  font-size: 30px;
+  text-align: left;
+  padding-left: 28px;
+  padding-bottom: 5px;
+}
+.login-menu-word{
+  text-align: left;
+  padding-left: 30px;
+  width: 140px;
+}
+.login-menu-pw{
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 30px;
+  width: 140px;
+}
+.login-form{
+  width: 200px;
+  height: 30px;
+}
+.login-menu-buttom{
+  padding-top: 17px;
 
-//メイン画面(ログイン)
+}
+.login-form-buttom{
+  font-size: 15px;
+  color: #ffffff; 
+  width: 210px;
+  height: 40px;
+  border: solid 1px;
+  background    : #6171b6; 
+}
+.login-form-buttom:hover {
+  box-shadow    : none;
+  color         : #000066;
+  background    : #ffffff;
+}
+
 .main-menu {
   padding-top: 130px;
   padding-bottom: 30px;
   height: 100vh;
   background-color: #def7ff;
-    
 }
 .main-center{
   padding-top: 60px;
@@ -90,13 +151,16 @@
   background-color: #def7ff;
   font-size: 20px;
 }
-
 .login-in{
   font-size: 20px;
 }
 .login-new{
   font-size: 20px;
 }
+
+
+
+
 
 .main{
   background-color: #def7ff;

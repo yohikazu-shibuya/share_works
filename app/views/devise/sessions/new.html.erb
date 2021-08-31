@@ -1,27 +1,31 @@
 <%= render "devise/shared/header" %>
+  
   <div class="login-menu">
-    
-      <div class="login-menu-name">
-        ログイン
-      </div>
-      
     <div class="login-center">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="login-menu-form">
-          <%= f.label :メールアドレス %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div class="login-menu-name">
+          ログイン
         </div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="login-menu-word">
+            <%= f.label :Eメールアドレス %>
+          </div>
+          <div class="login-menu-form">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "login-form" %>
+          </div>
 
-        <div class="login-menu-form">
-          <%= f.label :パスワード %><br />
-          <%= f.password_field :password, autocomplete: "current-password" %>
-        </div><br>
+          <div class="login-menu-pw">
+            <%= f.label :パスワード %>
+          </div>
+          <div class="login-menu-form">
+            <%= f.password_field :password, autocomplete: "current-password", class: "login-form" %><br>
+          </div>
 
-        <div class="login-menu-buttom">
-          <%= f.submit "ログイン" %> 
-        </div>
+          <div class="login-menu-buttom">
+            <%= f.submit "ログイン", class: "login-form-buttom"  %> 
+          </div>
     </div>
   </div>
-<%= render "devise/shared/footer" %>
 <% end %>
+<%= render "devise/shared/footer" %>
+
 
