@@ -248,7 +248,7 @@ ol, ul {
 }
 .notice-header-list{
   padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 .container {
   margin: 20px 0;
@@ -266,13 +266,14 @@ ol, ul {
   display: flex;
 }
 .notices-new-main{
+  padding-top: 15px;
   padding-left: 10px;
 }
 .notice-main-word{
   font-size: 40px;
   padding-top: 5px;
   padding-left: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .notice-main-main{
   display: flex;
@@ -303,7 +304,7 @@ ol, ul {
   display: flex;
 }
 .notice-main-one{
-  width: 150px;
+  width: 100wh;
   height: 20px;
   margin-left: 10px;
   margin-right: 10px;
@@ -345,12 +346,13 @@ ol, ul {
   height: calc(100vw - 70px);
 }
 .notices-title-main{
-  padding-top: 20px;
+  padding-top: 15px;
   font-size: 20px;
 }
 .notice-main-word{
   padding-top: 5px;
   font-size: 20px;
+  
 }
 .notices-subjects{
   padding-left: 5px;
@@ -358,10 +360,10 @@ ol, ul {
   padding-bottom: 5px;
   font-size: 20px;
   color: rgb(161, 10, 10);
+
 }
 .notices-sub{
   margin-right: 10px;
-
   border-bottom:solid 1px;
   border-color: rgb(142, 199, 246);
 }
@@ -393,13 +395,12 @@ ol, ul {
 
 //qa_show画面
 .qa-main{
-  padding-left: 10px;
   background-color: #def7ff;
-  height: calc(100vw - 70px);
+//   height: calc(100vw - 70px);
 }
-.qa-title-main{
-  padding-top: 20px;
-  font-size: 20px;
+
+.qa-body{
+  display: flex;
 }
 .qa-title{
   margin-right: 20px;
@@ -423,9 +424,6 @@ ol, ul {
   font-size: 20px;
   color: blue;
 }
-
-
-
 //meesage部分について
 .message-main{
   background-color: #def7ff;
@@ -456,7 +454,6 @@ ol, ul {
   padding-right: 5px;
   padding-top: ５px;
   height: 50px;
-
   }
 .message-text{
   margin-top: 20px;
