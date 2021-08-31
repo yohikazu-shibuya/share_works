@@ -12,17 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_08_17_052256) do
 
-  create_table "manuals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "genre_id", null: false
-    t.string "subject", null: false
-    t.text "question", null: false
-    t.text "answer", null: false
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_manuals_on_user_id"
-  end
-
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "subject"
     t.text "message"
@@ -72,7 +61,6 @@ ActiveRecord::Schema.define(version: 2021_08_17_052256) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "manuals", "users"
   add_foreign_key "messages", "qas"
   add_foreign_key "messages", "users"
   add_foreign_key "notices", "users"
