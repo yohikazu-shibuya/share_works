@@ -1,35 +1,36 @@
 <%= render "devise/shared/header" %>
-
  <div class="notice-main">
-    <div class="notice-body">
-      
-      <div class="notice-side">
-        <div class="noticeside-menu">
-          メニュー
-        </div>
-        <div class="notice-a">
-          <%= link_to "メインメニュー", root_path, class: "post" %>
-        </div><br>
-        <div class="notice-a">
-          <%= link_to "Q&A一覧へ", qas_path, class: "post" %>
-        </div>
-        <div class="notice-a">
-          <%= link_to "QA追加", new_qa_path, class: "post" %>
-        </div>
-  </div>
-    <div class="notices-new-main">
-      <div class="notice-main-word">
-        お知らせ入力画面
-      </div>
-        <%= form_with(model: @notice, local: true) do |f|%>
+  <div class="notice-body">
+            
+            <div class="notice-side">
+                  <div class="notice-side-menu">
+                    メニュー
+                  </div>
+                  <div class="notice-a">
+                    <%= link_to "メインメニュー", root_path, class: "post" %>
+                  </div><br>
+                  <div class="notice-a">
+                    <%= link_to "Q&A一覧へ", qas_path, class: "post" %>
+                  </div>
+                  <div class="notice-a">
+                    <%= link_to "QA追加", new_qa_path, class: "post" %>
+                  </div>
+            </div>
+            
+            <div class="notices-new-main">
+                  <div class="notice-main-word">
+                    お知らせ入力画面
+                  </div>
+                      <%= form_with(model: @notice, local: true) do |f|%>
 
-        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {},) %><br><br>
+                      <%= f.collection_select(:genre_id, Genre.all, :id, :name, {},) %><br><br>
 
-        <%= f.text_area :subject, placeholder:"例) 件名", size: "40x2" %><br><br>
+                      <%= f.text_area :subject, placeholder:"例) 件名", size: "40x2" %><br><br>
 
-        <%= f.text_area :notice, placeholder:"例) 内容", size: "80x20" %><br><br>
-        <%= f.submit "保存する", class: "button" %>
-        <% end %>
+                      <%= f.text_area :notice, placeholder:"例) 内容", size: "80x20" %><br><br>
+                      <%= f.submit "保存する", class: "button" %>
+                      <% end %>
+            </div>
     </div>
  </div>
 <%= render "devise/shared/footer" %>
