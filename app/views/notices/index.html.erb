@@ -19,11 +19,11 @@
           <span class="manual-list-menu">
             お知らせ
           </span>
-            <div class="notice-list-menu-two">
+            <%# <div class="notice-list-menu-two">
               <%= form_with(model: @notice, local: true) do |f|%>
-              <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>
-              <% end %>
-            </div>
+             <%# <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>
+              <%# <% end %>
+            <%# </div> %>
         </div>
 
           <div class="notice-top">
