@@ -6,8 +6,10 @@
           <div class="share-affiliation">
             <%= current_user.affiliation %>
           </div>
+          <div class="header-name">
             <%= current_user.last_name %>
             <%= current_user.first_name %>
+          </div>
           <div class="share-logout">
             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
           </div>
