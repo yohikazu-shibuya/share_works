@@ -439,6 +439,9 @@ ol, ul {
 .message-addition{
   font-size: 20px;
 }
+.message-contributor{
+  padding-top: 15px;
+}
 .message-sub{
   border-bottom:solid 1px;
   border-color: rgb(142, 199, 246);
@@ -478,6 +481,17 @@ ol, ul {
   border-top:solid 1px;
   border-color: rgb(142, 199, 246);
 }
+.message-tuiki{
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+.message-item{
+  padding-bottom: 5px;
+}
+.message-item-b{
+  padding-bottom: 5px;
+}
+
 .button{
   font-size: 15px;
   color: #ffffff; 

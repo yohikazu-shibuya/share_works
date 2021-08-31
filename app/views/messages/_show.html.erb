@@ -4,6 +4,11 @@
   </div>
   <% @messages.each_with_index do |message, i| %>
     <%# <% @messages.each_with_index do |i, x|%>
+    <div class="message-contributor">
+          <%= @qa.user.last_name %>
+          <%= @qa.user.first_name %><br>
+          <%= @qa.created_at.strftime('%Y/%m/%d %H:%M') %><br>
+    </div>
     <div class="message-under-line">
     <div class="message-subjects">
     <%= "(#{i+1})確認" %>
@@ -24,11 +29,18 @@
   <% end %>
 
   <div class="message-comment-main">
-    <%= "追記" %>
+    <div class="message-tuiki">
+      追記
+    </div>
       <%= form_with(model: [@qa, @message], method: :post) do |f|%>
-                <%= f.text_area :subject, placeholder:"例) 件名", size: "40x2"  %><br>
-                <%= f.text_area :message, placeholder:"例) コメンツ", size: "80x20"  %><br>
-                <%= f.submit '保存', class: "button" %>
+      
+        <div class="message-item">
+          <%= f.text_area :subject, placeholder:"例) 件名", size: "40x2"  %><br>
+        </div>
+        <div class="message-item-b">
+          <%= f.text_area :message, placeholder:"例) コメンツ", size: "70x15"  %><br>
+        </div>    
+          <%= f.submit '保存', class: "button" %>
       <% end %>
   </div>
 </div>
