@@ -42,57 +42,58 @@
 # テーブル設計
 
 # usersテーブル
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
 | email              | string | null: false, unique: true |
-| encrypted_password | string | null: false |
-| last_name          | string | null: false |
-| first_name         | string | null: false |
-| last_name_kana     | string | null: false |
-| first_name_kana    | string | null: false |
-| affiliation        | string | null: false |
+| encrypted_password | string | null: false               |
+| last_name          | string | null: false               |
+| first_name         | string | null: false               |
+| last_name_kana     | string | null: false               |
+| first_name_kana    | string | null: false               |
+| affiliation        | string | null: false               |
 
 ### Association
-- has_many :
-- has_many :
+- has_many :notices
+- has_many :qas
+- has_many :messages
 
 # noticesテーブル
-| Column                 | Type       | Options                        |
-| ---------------------- | ---------- | ------------------------------ |
-| type_qa                | integer    | null: false                    |
-| subject                | string     | null: false                    |
-| notice                 | string     | null: false                    |
-| user                   | references | null: false, foreign_key: true |
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| genre_id | integer    | null: false                    |
+| subject  | string     | null: false                    |
+| notice   | text       | null: false                    |
+| user     | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :
-- has_one :
-
-# manualsテーブル
-| Column     | Type       | Options                                     |
-| ---------- | ---------- | ------------------------------------------- |
-| type_qa                 | integer    | null: false                    |
-| subject                 | string     | null: false                    |
-| question                | text       | null: false                    |
-| answer                  | text       | null: false                    |
-| user                    | references | null: false, foreign_key: true |
-
-### Association
-- belongs_to :
-- belongs_to :
-- has_one :
+- belongs_to :user
+- has_many :messages
 
 # qasテーブル
-| Column     | Type       | Options                                     |
-| ---------- | ---------- | ------------------------------------------- |
-| type_qa                 | integer    | null: false                    |
-| subject                 | string     | null: false                    |
-| question                | text       | null: false                    |
-| answer                  | text       | null: false                    |
-| user                    | references | null: false, foreign_key: true |
+| Column   | Type       | Options                        |
+| -------- | ---------- | -------------------------------|
+| genre_id | integer    | null: false                    |
+| subject  | string     | null: false                    |
+| question | text       | null: false                    |
+| answer   | text       | null: false                    |
+| user     | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :
+- belongs_to :user
+- has_many :messages
+
+# messagesテーブル
+| Column  | Type       | Options                        |
+| ------- | ---------- | -------------------------------|
+| subject | text       | null: false                    |
+| message | text       | null: false                    |
+| qa      | references | null: false, foreign_key: true |
+| user    | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- belongs_to :notice
+- belongs_to :qa
 
  # ローカルでの動作方法
  - 作成予定
