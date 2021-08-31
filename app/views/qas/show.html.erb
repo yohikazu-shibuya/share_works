@@ -1,29 +1,36 @@
 <%= render "devise/shared/header" %>
 
-<div class="notices-main">
-  <div class="qa-title-main">
-    <div class="qa-title">
-      <%= "Q&Aテスト" %>
-    </div>
-    <%= link_to "QA一覧へ", qas_path, class: "post" %>
-  </div>
-    <% @qas.each do |qa| %>
-      <div class="notices">
-              <div class="qa-subjects">
-              Q.
-              </div>
-                <div class="qa-show-two">
-                  <%= qa.question %>
-                </div>
-              <div class="qa-text">
-              A.
-              </div>
-              <div class="qa-show-three">
-                <%= qa.answer %>
-              </div><br><br>
-        <% end %>
+<div class="qa-main">
+  <div class="qa-title-main">    
+    <div class="notice-body">
+      <%= render "devise/shared/side_menu" %>
+        <div class="notice-header-list">
+          <% @qas.each do |qa| %>
 
-      <%= render "messages/show" %>
-  <%= render "devise/shared/footer" %>
+              <div class="notice-main-word">
+                <%= qa.user.last_name %>
+                <%= qa.user.first_name %><br>
+                <%= qa.created_at.strftime('%Y/%m/%d %H:%M') %><br>
+              </div>
+
+              <div class="notices">
+                  <div class="qa-subjects">
+                  Q.
+                  </div>
+                  <div class="qa-show-two">
+                    <%= qa.question %>
+                  </div>
+                <div class="qa-text">
+                A.
+                </div>
+                <div class="qa-show-three">
+                  <%= qa.answer %>
+                </div><br><br>
+                </div>
+          <% end %>
+          <%= render "messages/show" %>
+    </div>
   </div>
 </div>
+
+<%= render "devise/shared/footer" %>

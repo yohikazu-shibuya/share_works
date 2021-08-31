@@ -1,23 +1,7 @@
 <%= render "devise/shared/header" %>
- <div class="notice-main">
-    <div class="notice-body">
-      
-      <div class="notice-side">
-        <div class="notice-side-menu">
-          メニュー
-        </div>
-        <div class="notice-a">
-          <%= link_to "メインメニュー", root_path, class: "post" %>
-        </div>
-        <div class="notice-a">
-          <%= link_to "Q&A一覧へ", qas_path, class: "post" %>
-        </div>
-        <div class="noticea"><br>
-          <%= link_to "お知らせ追加", new_notice_path, class: "post" %>
-        </div>
-          <%= link_to "QA追加", new_qa_path, class: "post" %>
-      </div>
-
+<div class="notice-main">
+  <div class="notice-body">
+    <%= render "devise/shared/side_menu" %>
   <div class="notices-new-main">
     <div class="notice-main-word">
       <%= "Q&Aを追加" %>
