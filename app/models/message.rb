@@ -1,5 +1,6 @@
 class Message < ApplicationRecord
-  belongs_to :user
-  belongs_to :notice
-  belongs_to :qa
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :user,optional: true
+  belongs_to :notice,optional: true
+  belongs_to :qa,optional: true
 end

@@ -1,25 +1,35 @@
 <%= render "devise/shared/header" %>
 
-<div class="notices-main">
-  <%= "お知らせテスト" %>
-  <% @notices.each do |notice| %>
-  <div class="notices">
-          <div class="notices-subjects">
-          件名
-          </div>
-          <div class="notices-sub">
-              <div class="notice-show-two">
-                <%= notice.subject %>
-              </div>
-          </div>
-                  <div class="notice-text">
-                  本文
-                  </div>
-              <div class="notice-show-three">
-                <%= notice.notice %>
-              </div>
+  <div class="notices-main">
+    <%= render "devise/shared/side_menu" %>
+    <div class="notices-title-main">
+        <div class="notice-body">
+          <div class="notice-header-list">
 
+            <% @notices.each do |notice| %>
+                <div class="notice-main-word">
+                  <%= notice.user.last_name %>
+                  <%= notice.user.first_name %><br>
+                  <%= notice.created_at.strftime('%Y/%m/%d %H:%M') %><br><br>
+                </div>
+                    <div class="notices">
+                        <div class="notices-subjects">
+                        件名
+                        </div>
+                        <div class="notice-show-two">
+                          <%= notice.subject %>
+                        </div>
+                          <div class="notice-text">
+                          本文
+                          </div>
+                        <div class="notice-show-three">
+                          <%= notice.notice %>
+                        </div>
+                    </div>
+              <% end %>
+          </div>       
+        </div>
+    </div>
   </div>
-  <% end %>
-</div>
+  
 <%= render "devise/shared/footer" %>

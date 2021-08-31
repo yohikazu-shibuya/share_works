@@ -7,70 +7,59 @@
     </title>
   </head>
   <body>
+  <div class="main">
   <%= render "devise/shared/header" %>
 
-    <div class="main">
-    <% if user_signed_in? %>
-    <div class="manual-body">
-      
-           <div class="manual-side">
-        <div class="manual-side-menu">
-          メニュー
-        </div>
-        <div class="manual-a">
-          マニュアル一覧
-        </div>
-          <li>ポイントカード</li>
-          <li>アプリ</li>
-          <li>キャンペーン</li>
-        <div class="manual-a">
-
-        </div><br>
-
-        <div class="manual-a">
-          <%= link_to "Q&A一覧", qas_path, class: "post" %>
-        </div>
-          <li>ポイントカード</li>
-          <li>アプリ</li>
-          <li>キャンペーン</li>
-        <div class="manual-a"><br>
-        <%= link_to "お知らせ追加", new_notice_path, class: "post" %>
-        </div>
-        <%= link_to "QA追加", new_qa_path, class: "post" %>
-      </div>
+  <% if user_signed_in? %>
+    <div class="notice-body">
+      <%= render "devise/shared/side_menu" %>
 
       <div class="manual-list">
         <div class="notice-header-list">
           <span class="manual-list-menu">
             お知らせ
           </span>
-            <%= form_with(model: @notice, local: true) do |f|%>
-            <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>
-            <% end %>
+            <%# <div class="notice-list-menu-two">
+              <%= form_with(model: @notice, local: true) do |f|%>
+             <%# <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}) %><br><br>
+              <%# <% end %>
+            <%# </div> %>
         </div>
 
           <div class="notice-top">
-            <% @notices.each do |notice| %>
+          <div class="notice-main-main">
+            <div class="notice-main-in">
+              日時
+            </div>
+            <div class="notice-main-category">
+              カテゴリ
+            </div>
+            <div class="notice-main-contents">
+              内容
+            </div>
+            <div class="notice-main-author">
+              入力者
+            </div>
+          </div>
+              <% @notices.each do |notice| %>
                   <div class="notice-side-one">
-                  <div class="notice-main-in">
-                    日時
-                  </div>
-                      <div class="notice-main-one">
-                        <%= notice.created_at.strftime('%Y/%m/%d %H:%M') %><br>
-                      </div>
-                     <div class="notice-main-two">
-                        <%= notice.genre.name %>
+                    <div class="notice-main-one">
+                      <%= notice.created_at.strftime('%Y/%m/%d %H:%M') %><br>
+                    </div>
+                    <div class="notice-main-two">
+                      <%= notice.genre.name %>
                     </div>
                     <div class="notice-main-three">
                         <%= link_to notice.subject, notice_path(notice.id), class: "post" %>
                     </div>
-                     <div class="notice-main-out">
-                     <%= link_to "QAへ", qas_path, class: "post" %>
-                     </div>
+                     <div class="notice-main-force">
+                        <%= notice.user.last_name %>
+                        <%= notice.user.first_name %>
+                    </div>
                   </div>
-                </div>
-            <% end %>
+              <% end %>
           </div>
+        </div>
       </div>
     </div>
   
@@ -86,8 +75,8 @@
         </div>
       </div>
     <% end %>
-
+<%= render "devise/shared/footer" %>
     </div>
   </body>
-  <%= render "devise/shared/footer" %>
+  
 </html>

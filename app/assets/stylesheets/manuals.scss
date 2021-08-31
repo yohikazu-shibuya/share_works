@@ -1,87 +1,198 @@
-.one_share {
+//リセットCSS
+html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align:baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+article, header, footer, aside, figure, figcaption, nav, section { 
+  display:block;
+}
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+ol, ul {
+  list-style: none;
+  list-style-type: none;
+}
+.main{
+  background-color: #def7ff;
+}
+//header部分
+.site-header{
+  width: 100%;
+  height: 70px;
+  background-color: #def7ff;
+  font-size: 20px;
   border-bottom:solid;
   border-color: rgb(142, 199, 246);
+}
+
+.share-works {
   font-weight: bold;
   font-size: 30px;
+  padding-top: 10px;
   padding-left: 10px;
   display: flex;
   justify-content: space-between;
 }
+.share-works-word{
+  padding-bottom: 3px;
+  padding-left: 10px;
+  font-size: 50px;
+}
+.light-header{
+  padding-top: 20px;
+  padding-right: 15px;
+  display: flex;
+}
 
+.share-affiliation{
+  padding-right: 15px;
+}
+.share-logout{
+  padding-left: 15px;
+}
+//新規登録画面
+.new-sessions-menu {
+  padding-top: 90px;
+  height: 100vh;
+  background-color: #def7ff; 
+}
+.new-sessions-center{
+  padding-top: 30px;
+  margin: auto;
+  border:solid 2px;
+  border-color: rgb(153, 201, 241);
+  height: 580px;
+  width: 400px;
+  background-color: #def7ff;
+  text-align: center;
+}
+.new-sessions-menu-name {
+  padding-bottom: 10px;
+  padding-left: 40px;
+  font-size: 30px;
+  text-align: left;
+}
+.session-form{
+  width: 310px;
+  height: 30px;
+  border: solid 1px;
+  border-color: black;
+}
+.session-form-name{
+  width: 150px;
+  height: 30px;
+  border: solid 1px;
+  border-color: black;
+}
+.new-sessions-buttom{
+  font-size: 15px;
+  color: #ffffff; 
+  width: 320px;
+  height: 40px;
+  border: solid 1px;
+  background    : #6171b6; 
+}
+.new-sessions-buttom:hover {
+  box-shadow    : none;
+  color         : #000066;
+  background    : #ffffff;
+}
+.sessions-menu-word-a{
+  text-align: left;
+  padding-left: 39px;
+}
+.sessions-menu-word{
+  text-align: left;
+  padding-left: 40px;
+}
+.sessions-form-name{
+  padding-bottom: 10px;
+}
 //ログイン画面
 .login-menu {
   padding-top: 100px;
   padding-bottom: 30px;
   height: 100vh;
   background-color: #def7ff;
-  
 }
 .login-center{
-padding-top: 60px;
-margin: auto;
-border:solid;
-border-color: rgb(142, 199, 246);
-height: 190px;
-width: 170px;
-background-color: #def7ff;
-text-align: center;
-}
-
-//新規登録画面
-.new-sessions-menu-name {
-  font-size: 30px;
+  padding-top: 40px;
+  margin: auto;
+  border:solid 2px;
+  border-color: rgb(180, 215, 243);
+  height: 300px;
+  width: 380px;
+  background-color: #def7ff;
   text-align: center;
 }
 .login-menu-name {
   font-size: 30px;
-  text-align: center;
+  text-align: left;
+  padding-left: 30px;
+  padding-bottom: 5px;
 }
-.new-sessions-menu {
-  padding-top: 100px;
+.login-menu-word{
+  text-align: left;
+  padding-left: 32px;
+  width: 140px;
+}
+.login-menu-pw{
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 32px;
+  width: 140px;
+}
+.login-form{
+  width: 310px;
+  height: 30px;
+  border: solid 1px;
+  border-color: black;
+}
+.login-menu-buttom{
+  padding-top: 17px;
+
+}
+.login-form-buttom{
+  font-size: 15px;
+  color: #ffffff; 
+  width: 320px;
+  height: 40px;
+  border: solid 1px;
+  background    : #6171b6; 
+}
+.login-form-buttom:hover {
+  box-shadow    : none;
+  color         : #000066;
+  background    : #ffffff;
+}
+//ログイン前のTOP画面
+.main-menu {
+  padding-top: 130px;
   padding-bottom: 30px;
   height: 100vh;
-  background-color: #def7ff; 
-}
-.new-sessions-center{
-padding-top: 30px;
-margin: auto;
-border:solid;
-border-color: rgb(142, 199, 246);
-height: 450px;
-width: 400px;
-background-color: #def7ff;
-text-align: center;
-}
-
-//メイン画面
-  .main-menu {
-    padding-top: 130px;
-    padding-bottom: 30px;
-    height: 100vh;
-    background-color: #def7ff;
-    
+  background-color: #def7ff;
 }
 .main-center{
-  padding-top: 60px;
+  padding-top: 80px;
   padding-bottom: 10px;
   margin: auto;
-  border:solid;
-  border-color: rgb(142, 199, 246);
+  border:solid 2px;
+  border-color: rgb(153, 201, 241);
   height: 170px;
   width: 170px;
   background-color: #def7ff;
   text-align: center;
 }
-
-.light-header{
-  padding-right: 10px;
-}
-.site-header {
-  height: 50px;
-  background-color: #def7ff;
-  font-size: 20px;
-}
-
 .login-in{
   font-size: 20px;
 }
@@ -89,37 +200,56 @@ text-align: center;
   font-size: 20px;
 }
 
-.manual-body{
-display: flex;
-height: 100vh;
+.main{
+  background-color: #def7ff;
+}
+.notice-main{
+  background-color: #def7ff;
 }
 
-.manual-side{
-  height: 100vh;
-  width: 200px;
+//サイドメニュー
+.notice-side{
+  display: flex;
+}
+.notice-side-body{
+  padding-top: 10px;
+  padding-left: 5px;
+  height: calc(100vw - 70px);
+  width: 150px;
   background-color: #def7ff;
   border-right:solid;
   border-color: rgb(142, 199, 246);
 }
-.manual-side-menu{
-  font-size: 20px;
+.notice-side-menu{
+  font-size: 25px;
+  padding-left: 5px;
+}
+.notice-a{
+  padding-top: 3px;
+  font-size: 15px;
+  padding-left: 10px;
 }
 
-
+//noticeお知らせ画面
 .manual-list{
   font-size: 20px;
-  height: 100vh;
-  width: 100%;
+  height: calc(100vw - 70px);
+  width: calc(100vw - 150px);
   background-color: #def7ff;
 }
-.notice-header-list{
-  display: flex;
-}
-
 .manual-list-menu{
- margin-right: 20px;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 5px;
 }
-
+.notice-list-menu-two{
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.notice-header-list{
+  padding-left: 10px;
+  padding-top: 5px;
+}
 .container {
   margin: 20px 0;
   padding: 30px;
@@ -128,79 +258,228 @@ height: 100vh;
   box-sizing: border-box;
 }
 
-
-
-.notice-side-one{
+//お知らせ入力画面
+.notice-main{
+  background-color: #def7ff;
+}
+.notice-body{
   display: flex;
 }
-
+.notices-new-main{
+  padding-top: 15px;
+  padding-left: 10px;
+}
+.notice-main-word{
+  font-size: 40px;
+  padding-top: 5px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+.notice-main-main{
+  display: flex;
+  margin-bottom: 5px;
+}
+.notice-main-in {
+  width: 160px;
+  height: 20px;
+  padding-left: 8px;
+}
+.notice-main-category {
+  width: 130px;
+  height: 20px;
+  padding-left: 5px;
+}
+.notice-main-contents{
+  width: 300px;
+  height: 20px;
+  padding-left: 5px;
+}
+.notice-main-author{
+  width: 110px;
+  height: 20px;
+  padding-left: 5px;
+}
+.notice-side-one{
+  margin-bottom: 5px;
+  display: flex;
+}
 .notice-main-one{
+  width: 100wh;
+  height: 20px;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 3px;
 }
-
 .notice-main-two{
+  width: 130px;
+  height: 20px;
+  padding-left: 5px;
   font-size: 15px;
-  margin-right: 10px;
   margin-top: 3px;
 }
-
 .notice-main-three{
+  width: 300px;
+  height: 20px;
   font-size: 15px;
   margin-right: 10px;
   margin-top: 3px;
   }
+.notice-main-force{
+  width: 200px;
+  height: 20px;
+  font-size: 15px;
 
+  margin-top: 3px;
+}
 .footer {
   border-top:solid;
   border-color: rgb(142, 199, 246);
   height: 50px;
   background-color: #def7ff;
-  font-size: 20px;
 }
 
 //notice SHOW画面
 .notices-main{
   padding-left: 10px;
+  display: flex;
   background-color: #def7ff;
-  height: 100vh;
+  height: calc(100vw - 70px);
+}
+.notices-title-main{
+  padding-top: 15px;
+  font-size: 20px;
+}
+.notice-main-word{
+  padding-top: 5px;
+  font-size: 20px;
+  
+}
+.notices-subjects{
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  color: rgb(161, 10, 10);
+
 }
 .notices-sub{
   margin-right: 10px;
-  background-color: white;
-  border:solid 1px;
+  border-bottom:solid 1px;
   border-color: rgb(142, 199, 246);
-  display: flex;
-}
-
-.notices-subjects{
-padding-top: 5px;
 }
 .notice-show-two{
-  font-size: 15px;
+  font-size: 20px;
   margin-right: 10px;
   padding-left: 5px;
   padding-right: 5px;
+  padding-bottom: 5px;
+  border-bottom:solid 1px;
+  border-color: rgb(142, 199, 246);
+}
+.notice-show-three{
+  font-size: 20px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+  }
+.notice-main-out{
+  margin-bottom: 5px;
+}
+.notice-text{
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 5px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgb(7, 7, 176);
 }
 
-.notice-show-three{
+//qa_show画面
+.qa-main{
+  background-color: #def7ff;
+//   height: calc(100vw - 70px);
+}
+
+.qa-body{
+  display: flex;
+}
+.qa-title{
+  margin-right: 20px;
+}
+.qa-show-two{
+  border-bottom:solid 1px;
+  border-color: rgb(142, 199, 246);
+  margin-right: 20px;
+  padding-left: 5px;
+}
+.qa-subjects{
+  padding-top: 20px;
+  font-size: 20px;
+  color: red;
+}
+.qa-show-three{
+  padding-left: 5px;
+}
+.qa-text{
+  margin-top: 15px;
+  font-size: 20px;
+  color: blue;
+}
+//meesage部分について
+.message-main{
+  background-color: #def7ff;
+}
+.message-addition{
+  font-size: 20px;
+}
+.message-sub{
+  border-bottom:solid 1px;
+  border-color: rgb(142, 199, 246);
+  margin-right: 10px;
+  display: flex;
+}
+.message-subjects{
+  padding-top: 5px;
+  color: rgb(161, 10, 10);
+}
+.message-main-two{
+  font-size: 15px;
+  padding-left: 5px;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+.message-show-three{
   font-size: 15px;
   margin-right: 10px;
   padding-left: 5px;
   padding-right: 5px;
-  padding-top: 10px;
-  height: 300px;
-  background-color: white;
-  border:solid 1px;
-  border-color: rgb(142, 199, 246);
+  padding-top: ５px;
+  height: 50px;
   }
- .notice-main-out{
-   margin-bottom: 5px;
- }
-  
-  .notice-text{
-    margin-top: 20px;
+.message-text{
+  margin-top: 20px;
+  color: rgb(7, 7, 176);
+}
+
+.message-under-line {
+  padding-top: 5px;
+
+}
+.message-comment-main{
+  padding-top: 5px;
+  padding-bottom: 20px;
+  border-top:solid 1px;
+  border-color: rgb(142, 199, 246);
+}
+.button{
+  font-size: 15px;
+  color: #ffffff; 
+  width: 100px;
+  padding: 10px 0px;
+  border: solid 1px;
+  background    : #6171b6; 
+}
+.button:hover {
+  box-shadow    : none;
+  color         : #000066;
+  background    : #ffffff;
 }

@@ -1,0 +1,34 @@
+<div class="message-main">
+  <div class="message-addition">
+    <%= "追加情報" %>
+  </div>
+  <% @messages.each_with_index do |message, i| %>
+    <%# <% @messages.each_with_index do |i, x|%>
+    <div class="message-under-line">
+    <div class="message-subjects">
+    <%= "(#{i+1})確認" %>
+    </div>
+    <div class="message-sub">
+      <div class="message-main-two">
+        <%= message.subject %>
+      </div>
+    </div>
+    <div class="message-text">
+    回答
+    </div>
+    <div class="message-show-three">
+      <%= message.message %>
+    </div><br>
+   </div> 
+   <%# <% end%>
+  <% end %>
+
+  <div class="message-comment-main">
+    <%= "追記" %>
+      <%= form_with(model: [@qa, @message], method: :post) do |f|%>
+                <%= f.text_area :subject, placeholder:"例) 件名", size: "40x2"  %><br>
+                <%= f.text_area :message, placeholder:"例) コメンツ", size: "80x20"  %><br>
+                <%= f.submit '保存', class: "button" %>
+      <% end %>
+  </div>
+</div>

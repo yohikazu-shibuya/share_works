@@ -1,12 +1,16 @@
 <header class="site-header">
-    <div class="one_share">
-      <%= link_to "share_works", root_path, class: "post" %>
+    <div class="share-works">
+      <%= link_to "share_works", root_path, class: "share-works-word" %>
         <% if user_signed_in? %>
           <div class="light-header">
+          <div class="share-affiliation">
+            <%= current_user.affiliation %>
+          </div>
             <%= current_user.last_name %>
             <%= current_user.first_name %>
-            <%= current_user.affiliation %>
+          <div class="share-logout">
             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+          </div>
           </div>
         <% end %>
     </div>

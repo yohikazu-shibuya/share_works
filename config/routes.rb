@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :qas do
     resources :messages
   end
+  resources :users, only: :show
 end
