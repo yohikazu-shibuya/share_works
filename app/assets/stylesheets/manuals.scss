@@ -1,18 +1,36 @@
 .site-header{
-  background-color: #def7ff; 
   width: 100%;
-  height: 10%;
+  height: 800px;
   border-bottom:solid;
   border-color: rgb(142, 199, 246);
 }
-.one_share {
-  border-bottom:solid;
-  border-color: rgb(142, 199, 246);
+.share-works {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   padding-left: 10px;
   display: flex;
   justify-content: space-between;
+}
+.share-works-word{
+  padding-bottom: 3px;
+  padding-left: 10px;
+  font-size: 50px;
+}
+.light-header{
+  padding-top: 15px;
+  padding-right: 15px;
+  display: flex;
+}
+.site-header {
+  height: 70px;
+  background-color: #def7ff;
+  font-size: 20px;
+}
+.share-affiliation{
+  padding-right: 15px;
+}
+.share-logout{
+  padding-left: 15px;
 }
 //新規登録画面
 .new-sessions-menu {
@@ -39,10 +57,14 @@
 .session-form{
   width: 310px;
   height: 30px;
+  border: solid 1px;
+  border-color: black;
 }
 .session-form-name{
   width: 150px;
   height: 30px;
+  border: solid 1px;
+  border-color: black;
 }
 .new-sessions-buttom{
   font-size: 15px;
@@ -76,35 +98,37 @@
   background-color: #def7ff;
 }
 .login-center{
-  padding-top: 25px;
+  padding-top: 40px;
   margin: auto;
   border:solid 2px;
   border-color: rgb(180, 215, 243);
-  height: 270px;
-  width: 270px;
+  height: 300px;
+  width: 380px;
   background-color: #def7ff;
   text-align: center;
 }
 .login-menu-name {
   font-size: 30px;
   text-align: left;
-  padding-left: 28px;
+  padding-left: 30px;
   padding-bottom: 5px;
 }
 .login-menu-word{
   text-align: left;
-  padding-left: 30px;
+  padding-left: 32px;
   width: 140px;
 }
 .login-menu-pw{
   text-align: left;
   padding-top: 10px;
-  padding-left: 30px;
+  padding-left: 32px;
   width: 140px;
 }
 .login-form{
-  width: 200px;
+  width: 310px;
   height: 30px;
+  border: solid 1px;
+  border-color: black;
 }
 .login-menu-buttom{
   padding-top: 17px;
@@ -113,7 +137,7 @@
 .login-form-buttom{
   font-size: 15px;
   color: #ffffff; 
-  width: 210px;
+  width: 320px;
   height: 40px;
   border: solid 1px;
   background    : #6171b6; 
@@ -134,20 +158,12 @@
   padding-top: 80px;
   padding-bottom: 10px;
   margin: auto;
-  border:solid;
-  border-color: rgb(142, 199, 246);
+  border:solid 2px;
+  border-color: rgb(153, 201, 241);
   height: 170px;
   width: 170px;
   background-color: #def7ff;
   text-align: center;
-}
-.light-header{
-  padding-right: 10px;
-}
-.site-header {
-  height: 50px;
-  background-color: #def7ff;
-  font-size: 20px;
 }
 .login-in{
   font-size: 20px;
@@ -155,10 +171,6 @@
 .login-new{
   font-size: 20px;
 }
-
-
-
-
 
 .main{
   background-color: #def7ff;
