@@ -1,19 +1,21 @@
 <header class="site-header">
     <div class="share-works">
-      <%= link_to "share_works", root_path, class: "share-works-word" %>
-        <% if user_signed_in? %>
-          <div class="light-header">
-          <div class="share-affiliation">
-            <%= current_user.affiliation %>
-          </div>
-          <div class="header-name">
-            <%= current_user.last_name %>
-            <%= current_user.first_name %>
-          </div>
-          <div class="share-logout">
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
-          </div>
-          </div>
-        <% end %>
+      <div class="share-works-one">
+        <%= link_to "share_works", root_path, class: "share-works-word" %>
+      </div>
+          <% if user_signed_in? %>
+            <div class="light-header">
+            <div class="share-affiliation">
+              <%= current_user.affiliation %>
+            </div>
+            <div class="header-name">
+              <%= current_user.last_name %>
+              <%= current_user.first_name %>
+            </div>
+            <div class="share-logout">
+              <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+            </div>
+            </div>
+          <% end %>
     </div>
 </header> 

@@ -37,15 +37,17 @@ ol, ul {
 .share-works {
   font-weight: bold;
   font-size: 30px;
-  padding-top: 10px;
   padding-left: 10px;
   display: flex;
   justify-content: space-between;
 }
 .share-works-word{
-  padding-bottom: 3px;
+  padding-bottom: 30px;
   padding-left: 10px;
   font-size: 50px;
+}
+.share-works-one{
+  padding-bottom: 30px;
 }
 .light-header{
   min-width: 430px;
