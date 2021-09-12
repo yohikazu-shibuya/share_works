@@ -37,15 +37,17 @@ ol, ul {
 .share-works {
   font-weight: bold;
   font-size: 30px;
-  padding-top: 10px;
   padding-left: 10px;
   display: flex;
   justify-content: space-between;
 }
 .share-works-word{
-  padding-bottom: 3px;
+  padding-bottom: 30px;
   padding-left: 10px;
   font-size: 50px;
+}
+.share-works-one{
+  padding-bottom: 30px;
 }
 .light-header{
   min-width: 430px;
@@ -114,15 +116,26 @@ ol, ul {
   background    : #ffffff;
 }
 .sessions-menu-word-a{
+  display: flex;
   text-align: left;
   padding-left: 39px;
 }
 .sessions-menu-word{
+  display: flex;
   text-align: left;
   padding-left: 40px;
 }
 .sessions-form-name{
-  padding-bottom: 10px;
+  padding-bottom: 4px;
+}
+.indispensable-a{
+  color: red;
+  padding-left: 10px;
+}
+.indispensable{
+  color: red;
+  padding-top: 4px;
+  padding-left: 10px;
 }
 //ログイン画面
 .login-menu {
@@ -150,7 +163,7 @@ ol, ul {
 .login-menu-word{
   text-align: left;
   padding-left: 32px;
-  width: 140px;
+  width: 150px;
 }
 .login-menu-pw{
   text-align: left;

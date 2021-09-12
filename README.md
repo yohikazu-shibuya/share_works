@@ -9,7 +9,7 @@
 
 # テスト用アカウント
 - メールアドレス：abc@abc.com
-- パスワード123abc
+- パスワード：123abc
 
 # 利用方法
 - 各店舗や、各部署、コールセンター等で、周知や、Q&Aを追加したり共有できる
@@ -45,6 +45,7 @@
 
 # データベース設計
  - ER図
+
 [![Image from Gyazo](https://i.gyazo.com/8f291b9972eb515741fced1d6f1ab75c.png)](https://gyazo.com/8f291b9972eb515741fced1d6f1ab75c)
 
 # テーブル設計
